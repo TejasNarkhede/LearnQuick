@@ -1,1 +1,113 @@
-/* On th way */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.color-picker-container {
+    border: 1px solid #808080;
+    border-radius: 10px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.250);
+    text-align: center;
+    position: relative;
+    width: 50vw;
+    transition: box-shadow 0.3s ease;
+}
+
+.color-picker-container:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: rgba(20, 20, 20, 0.842);
+    margin-bottom: 75px;
+    text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.250);
+}
+
+
+.colorInput {
+    position: absolute;
+    visibility: hidden;
+}
+
+.picker-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.colorLabel {
+    width: 15vw;
+    height: 100px;
+    /* border: 1px solid black; */
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.250);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colorLabel:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 25px;
+    color: rgb(20, 20, 20);
+}
+
+#resetButton {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#resetButton:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05)
+}
+
+#colorCode {
+    background: rgba(255, 255, 255, 0.30);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* font-size: 1.2rem; */
+    letter-spacing: 0.05em;
+    /* display: inline-block; */
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#colorCode:hover {
+    background: rgba(255, 255, 255, 0.40);
+    transform: scale(1.05);
+}
+
+#colorCode:active {
+    transform: scale(0.98);
+}
