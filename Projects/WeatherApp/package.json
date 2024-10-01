@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "weather app in html,css,js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TejasNarkhede/LearnQuick.git"
+  },
+  "keywords": [
+    "weather",
+    "api"
+  ],
+  "author": "Tejas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TejasNarkhede/LearnQuick/issues"
+  },
+  "homepage": "https://github.com/TejasNarkhede/LearnQuick#readme"
+}
