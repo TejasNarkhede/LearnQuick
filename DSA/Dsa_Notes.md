@@ -1,6 +1,6 @@
-## DSA (Data Structures & Algorithms)
+# DSA (Data Structures & Algorithms)
 
-### Space and Time Complexity in DSA
+## Space and Time Complexity in DSA
 
 In Data Structures and Algorithms (DSA), understanding the efficiency of an algorithm is crucial. This is where space and time complexity come into play.
 
@@ -48,21 +48,41 @@ Space complexity measures the amount of memory an algorithm uses to solve a prob
 - Input size
 - Auxiliary space
 
-### Data Structures
+## Data Structures 
 
-#### Linear Data Structures
+### Linear Data Structures
 
-- **Arrays**
-
-  - Fundamental data structure used to store collections of elements of the same type.
+### Arrays
+Fundamental data structure used to store collections of elements of the same type.
+  - Linear data structure
   - Homogeneous data structure
   - Contiguous block of memory
+  - Fixed Size
+
+
+**Declaration Of Arrays**
+```
+int[] arr;
+// OR
+int[] arr = new int[size];
+```
+
+**Initialization Of Arrays**
+```
+int[] arr = {1,2,3,4,5};
+```
+
+**Types Of Arrays**
+
+![alt text](images/TypesOfArrays.png)
+
+**1D**
 
 - **ArrayList**
 
-  - Dynamic Arrays
+  - Dynamic Size
 
-- **Linked List**
+### Linked List
 
   - Non-contiguous memory
   - Efficient insertion and deletion
