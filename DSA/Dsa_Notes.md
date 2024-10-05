@@ -48,19 +48,26 @@ Space complexity measures the amount of memory an algorithm uses to solve a prob
 - Input size
 - Auxiliary space
 
-## Data Structures 
+## Data Structures
 
 ### Linear Data Structures
 
 ### Arrays
-Fundamental data structure used to store collections of elements of the same type.
-  - Linear data structure
-  - Homogeneous data structure
-  - Contiguous block of memory
-  - Fixed Size
 
+Fundamental data structure used to store collections of elements of the same type.
+
+- Linear data structure
+- Homogeneous data structure
+- Contiguous block of memory
+- Fixed Size
+
+**Need of Array**
+
+- Represent data in tables/matrics
+- creating queue stacks
 
 **Declaration Of Arrays**
+
 ```
 int[] arr;
 // OR
@@ -68,6 +75,7 @@ int[] arr = new int[size];
 ```
 
 **Initialization Of Arrays**
+
 ```
 int[] arr = {1,2,3,4,5};
 ```
@@ -76,19 +84,54 @@ int[] arr = {1,2,3,4,5};
 
 ![alt text](images/TypesOfArrays.png)
 
-**1D**
+**2D Array**
 
-- **ArrayList**
+- reference stored can be stored in continguous location
+- arrays of arrays
+- column size (not mandatory)
 
-  - Dynamic Size
+**Declaration Of Arrays**
+
+```
+int[][] arr2d = new int[row][col];
+```
+
+**Initialization Of Arrays**
+
+```
+int[][] arr2d = {
+  {1,2,3},
+  {4,5,6},
+  {7,8,9}
+};
+```
+
+**Jagged Arrays**
+
+- array of arrays where the inner arrays can be of different sizes
+- also known as "ragged" or "irregular" array.
+- 2-D array but with a variable number of columns in each row.
+- Dynamic Allocation, Flexible, etc
+
+```
+int[][] arr_name = {
+  {1,2,3},
+  {4,5},
+  {6,7,8,9}
+};
+```
+
+### ArrayList
+
+- Dynamic Size
 
 ### Linked List
 
-  - Non-contiguous memory
-  - Efficient insertion and deletion
-  - **Types:** Singly Linked List, Doubly Linked List, Circular Linked List, Doubly Circular Linked List
+- Non-contiguous memory
+- Efficient insertion and deletion
+- **Types:** Singly Linked List, Doubly Linked List, Circular Linked List, Doubly Circular Linked List
 
-  - Scratch implementation
+- Scratch implementation
 
 ```
   class Node {
@@ -142,7 +185,7 @@ int[] arr = {1,2,3,4,5};
         return false;
     }
   }
-  ```
+```
 
 #### Stack
 

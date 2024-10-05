@@ -1,5 +1,9 @@
-* {
-    background-color: rgb(55, 64, 82)
+body {
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
 }
 
 .banner {
@@ -9,7 +13,6 @@
 }
 
 .banner .product {
-    /* background-color: red; */
     width: 500px;
     height: 500px;
     position: absolute;
@@ -20,9 +23,11 @@
     transition: 0.7s;
     --left: 0px;
     display: flex;
+    background: transparent;
 }
 
 .banner .product .soda {
+    background: transparent;
     background: var(--url) var(--left) 0,
     url(images/can.png);
     background-size: auto 100%;
@@ -40,24 +45,39 @@
 }
 
 .banner .product:hover {
-    --left: 1000px;
+    --left: 1280px;
     transform: translateX(-50%) translateY(-120px);
 }
 
 .banner .product .soda:nth-child(2){
     opacity: 0;
-    
 }
 
 .banner .product:hover .soda:nth-child(2){
     opacity: 1;
 }
 
+.meme {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
 .meme img {
     height: 500px;
-    position: fixed;
+    /* position: fixed; */
     top: 40%;
     left: 25%;
     z-index: 1;
-    background-blend-mode: screen;
+    background: transparent;
+    
+}
+
+.flipped {
+    transform: scaleX(-1); /* Flips the image horizontally */
 }
