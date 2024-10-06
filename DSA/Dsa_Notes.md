@@ -27,6 +27,8 @@ In Data Structures and Algorithms (DSA), understanding the efficiency of an algo
   - Optimizing existing algorithms.
   - Analyzing the performance of different implementations.
 
+![Notations](images/Notations.png)
+
 ### What is Big O Notation?
 
 Big O notation is a mathematical notation used to describe the limiting behavior of a function when the argument tends towards a particular value or infinity. In simpler terms, it's a way to measure the efficiency or complexity of an algorithm.
@@ -38,6 +40,8 @@ Big O notation is a mathematical notation used to describe the limiting behavior
 - **Logarithmic Time Complexity:** O(log n)
 - **Quadratic Time Complexity:** O(n^2)
 - **Cubic Time Complexity:** O(n^3)
+
+![alt text](images/TimeCom.png)
 
 #### Space Complexity
 
@@ -60,6 +64,8 @@ Fundamental data structure used to store collections of elements of the same typ
 - Homogeneous data structure
 - Contiguous block of memory
 - Fixed Size
+
+![alt text](images/ArrayDecInit.png)
 
 **Need of Array**
 
@@ -129,7 +135,17 @@ int[][] arr_name = {
 
 - Non-contiguous memory
 - Efficient insertion and deletion
-- **Types:** Singly Linked List, Doubly Linked List, Circular Linked List, Doubly Circular Linked List
+- **Types:** 
+  - Singly Linked List
+  - Doubly Linked List
+  - Circular LinkedList
+  - Doubly Circular Linked List
+
+**LinkedList**
+![LinkedList](images/LInkedList.png)
+
+**Node**
+![Node](images/Node.png)
 
 - Scratch implementation
 
