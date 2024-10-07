@@ -206,7 +206,25 @@ int[][] arr_name = {
 #### Stack
 
 - **Principle:** LIFO (Last In First Out)
-- **Methods:** push(), pop()
+- **Methods:** 
+  - push()
+  - **pop()** - Returns top and pops/removes from stack
+  ```
+  stack.push("Hey"); 
+  stack.push("I"); 
+  stack.push("Am"); 
+  stack.push("Pop"); 
+  System.out.println(stack.pop()) //Pop
+  ```
+  - **peek()** - Returns first/top element of stack else NULL
+  ```
+  stack.push(1); 
+  stack.push(2); 
+  stack.push(3); 
+  stack.push(4); 
+  stack.push(5);
+  System.out.println(stack.peek()) //5
+  ```
 
 #### Queue
 
@@ -222,9 +240,19 @@ int[][] arr_name = {
 **Methods:**
 
 - put(key, value)
+
 - get(key)
-- containsKey(key)
-- containsValue(value)
+
+- **keySet()** - Returns set containing of keys you can traverse it as well
+```
+cars.put("BMW", "M5");
+cars.put("Mercedes", "C63");
+System.out.println(cars.keySet()); // [Mercedes, BMW]
+```
+
+- **containsKey(Object key)** - (boolean) Returns true if key present or false
+
+- **containsValue(Object value)** - (boolean) Returns true if value present or false
 
 ### Sorting
 
