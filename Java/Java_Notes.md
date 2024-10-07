@@ -36,8 +36,19 @@ A primitive data type is predefined by the language and is named by a keyword or
 
 ### String Methods
 
-* **equals():** Compares the value of two strings.
-* **==:** Compares the references of two strings.
+- **equals():** Compares the value of two strings.
+- **==:** Compares the references of two strings.
+- **contains()** - (boolean) Checks whelter string contains sequence of characters
+```
+String str = "Hello World";
+System.out.println(str.contains("Hello")); //true
+```
+- **replace()** - Returns a new string with newly replace characters
+```
+String str = "Hello World";
+System.out.println(str.replace("World", "String")); // Hello String
+```
+
 
 ### OOPS (Object-Oriented Programming)
 
