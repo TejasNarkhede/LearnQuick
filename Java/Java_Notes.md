@@ -1,3 +1,33 @@
+# Java
+
+## Memory Management
+
+### Heap Memory
+
+**Divided into two main areas:** 
+- Young Generation 
+- Old Generation
+
+
+**Young Generation:**
+Where new objects are created. Divided into 3 parts: 
+  - Eden Space,
+  - Survivor Spaces (S0 and S1)  
+  
+Minor GC collects unreachable objects and moves surviving objects to a Survivor Space.
+Objects that survive multiple Minor GCs are promoted to the Old Generation.
+
+**Old Generation:** 
+Holds objects that have survived multiple Minor GCs.
+Objects in this space are generally considered to be long-lived.
+Major GC collects unreachable objects from the Old Generation.
+
+**Benefits of this separation:**
+- Efficient memory management
+- Faster garbage collection
+- Reduced fragmentation
+
+
 ## Java Data Types
 
 ### Primitive Data Types
