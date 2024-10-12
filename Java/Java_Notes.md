@@ -86,3 +86,18 @@ System.out.println(str.replace("World", "String")); // Hello String
 * **Abstraction:** Hiding unnecessary details from the user.
 * **Inheritance:** Creating new classes based on existing ones.
 * **Polymorphism:** Ability of objects to take on multiple forms.
+
+## Miscellaneous
+
+### JSP
+JSP Java/Jakarta Server Pages  
+Server Side Technology  
+Creating dynamic web pages.  
+JSP files are compiled into Java servlets at runtime.  
+JSP allows you to embed Java code within HTML, making it easier to create dynamic content.  
+JSP are extended version of servlet
+
+### Servlet
+A Servlet is a Java class that extends the HttpServlet class or implements the Servlet interface.  
+Servlets handle HTTP requests and generate HTTP responses.  
+They can be used to perform server-side processing, such as database access, business logic, and dynamic content generation.
