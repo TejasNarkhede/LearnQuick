@@ -254,6 +254,26 @@ System.out.println(cars.keySet()); // [Mercedes, BMW]
 
 - **containsValue(Object value)** - (boolean) Returns true if value present or false
 
+## Search Techniques
+
+### Linear Search
+
+Input **arr[]** and **target**.  
+Iterates one by one using **for loop**.  
+If the current element matches the target, the **index i is returned**.  
+If the target is not found **-1 is returned**.
+
+```
+public static int linearSearch(int[] arr, int target) {
+  for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == target) {
+          return i; // Target found at index i
+      }
+  }
+  return -1; // Target not found
+}
+```
+
 ### Sorting
 
 - Bubble sort
