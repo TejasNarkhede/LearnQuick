@@ -274,6 +274,17 @@ public static int linearSearch(int[] arr, int target) {
 }
 ```
 
+### Binary Search
+The array must be sorted for binary search to work.
+Binary search is much faster than linear search for large arrays.
+The time complexity of binary search is O(log n).
+
+
+**Avoiding Overflow** : Instead of using (start + end) / 2 (which can cause overflow if start + end is too large), it safely calculates the middle by:
+```
+int mid = start + (end - start) / 2;
+```
+
 ### Sorting
 
 - Bubble sort
