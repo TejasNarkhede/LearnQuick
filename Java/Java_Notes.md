@@ -1,5 +1,16 @@
 # Java
 
+## Get Started  
+
+[Memory](#memory-management)  
+[DataTypes](#java-data-types)  
+[Variables](#variables)  
+[Arrays](#arrays)  
+[Strings](#strings)  
+[OOPS](#oops-object-oriented-programming)  
+[Miscellaneous](#miscellaneous)  
+[Math](#java-math)
+
 ## Memory Management
 
 ### Heap Memory
@@ -32,7 +43,8 @@ Major GC collects unreachable objects from the Old Generation.
 
 ### Primitive Data Types
 
-A primitive data type is predefined by the language and is named by a keyword or reserved keyword. There are eight types of primitive data types in Java:
+Also known as reference type because they refer to objects  
+A primitive data type is predefined by the language and is named by a keyword or reserved keyword. There are eight types of primitive data types in Java:  
 
 * **boolean:** Stores true or false values.
 * **byte:** 8-bit signed two's complement integer (-128 to 127).
@@ -59,26 +71,55 @@ A primitive data type is predefined by the language and is named by a keyword or
 
 * **Jagged Arrays:** Arrays where elements can be of different sizes.
 
-### String
-
+### Strings
+A String variable contains a collection of characters surrounded by **double quotes ("String")**  
 * **String Pool:** A pool of shared string objects for efficiency.
 * **Immutable:** String objects cannot be modified after creation.
 
 ### String Methods
 
-- **equals():** Compares the value of two strings.
-- **==:** Compares the references of two strings.
+- **length():** Find length of String  
+```
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());
+```
+
+- **toUpperCase()** & **toLowerCase()**
+```
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+```
+
+- **indexOf():** The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+```
+String txt = "Please locate where 'locate' occurs!";
+System.out.println(txt.indexOf("locate")); // Outputs 7
+```
+
+- **concat():** method to concatenate two strings
+```
+String firstName = "John ";
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName));
+```
+
+
 - **contains()** - (boolean) Checks whelter string contains sequence of characters
 ```
 String str = "Hello World";
 System.out.println(str.contains("Hello")); //true
 ```
+
 - **replace()** - Returns a new string with newly replace characters
 ```
 String str = "Hello World";
 System.out.println(str.replace("World", "String")); // Hello String
 ```
 
+- **equals():** Compares the value of two strings.
+
+- **==:** Compares the references of two strings.
 
 ### OOPS (Object-Oriented Programming)
 
@@ -88,6 +129,23 @@ System.out.println(str.replace("World", "String")); // Hello String
 * **Polymorphism:** Ability of objects to take on multiple forms.
 
 ## Miscellaneous
+
+### Java Math
+The Java Math class has many methods that allows you to perform mathematical tasks on numbers.
+
+- **Math.max(a,b)** - Find **highest** value among two
+
+- **Math.min(a,b)** - Find **lowest** value among two
+
+- **Math.sqrt(x)** - Returns the **square root** of x
+
+- **Math.abs(x)** - Returns absolute **positive value**
+
+- **Math.random()** -  returns a random number between **0.0** and **1.0**
+```
+int randomNum = (int)(Math.random() * 101);  // 0 to 100
+```
+
 
 ### JSP
 JSP Java/Jakarta Server Pages  

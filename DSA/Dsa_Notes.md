@@ -275,9 +275,13 @@ public static int linearSearch(int[] arr, int target) {
 ```
 
 ### Binary Search
-The array must be sorted for binary search to work.
-Binary search is much faster than linear search for large arrays.
-The time complexity of binary search is O(log n).
+Check the value in the center of the array.  
+If the target value is lower, search the left half of the array.   
+If the target value is higher, search the right half.
+
+- The array must be **sorted** for binary search to work.  
+- Binary search is much **faster** than linear search for large arrays.  
+- The time complexity of binary search is **O(log n)**.
 
 
 **Avoiding Overflow** : Instead of using (start + end) / 2 (which can cause overflow if start + end is too large), it safely calculates the middle by:
