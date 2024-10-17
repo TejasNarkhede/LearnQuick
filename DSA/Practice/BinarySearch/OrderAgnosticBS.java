@@ -1,5 +1,3 @@
-package DSA.Practice.BinarySearch;
-
 public class OrderAgnosticBS {
     public static void main(String[] args) {
         @SuppressWarnings("unused")
