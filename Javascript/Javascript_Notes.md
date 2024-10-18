@@ -4,7 +4,7 @@ ECMAScript is the official name of the language.
 
 ## Variable Naming Convention
 
-$ and \_ Allowed  
+$ and _ Allowed  
 No Leading Numbers  
 No Leading Special Characters
 
@@ -92,6 +92,87 @@ console.log(typeof numbers); // object
 **Tip**
 Use **_typeof_** Operator find the type of a JavaScript variable.
 
+## Operators
+
+### Comparison operators
+Returns true or false (**boolean**)  
+This operators are used in logical statements to determine equality or difference between variables or values.
+
+**Equality (==)** :
+Equal to. Checks if the values are equal, regardless of their data types.
+
+**Inequality (!=)** : 
+Not equal to. Checks if the values are not equal, regardless of their data types.
+
+**Strict equality (===)** : 
+Strict equal to. Checks if the values are equal and of the same data type.
+
+**Strict inequality (!==)** : 
+Strict not equal to. Checks if the values are not equal or of different data types.
+
+
+### Relational Operators
+Relational operators in JavaScript are used to compare two values and return a Boolean value (true or false) based on the relationship between them.
+
+**Greater than operator (>)** : Greater than.
+
+**Greater than or equal operator (>=)** : Greater than or equal to.
+
+**Less than operator (<)** : Less than.
+
+**Less than or equal operator (<=)** : Less than or equal to.
+
+
+
+### Conditional Statements
+Conditional statements allow you to control the flow of your JavaScript code based on specific conditions.
+
+**If Statement** :
+Executes a block of code if a specified condition is true.
+```
+if (condition) {
+    // Code to be executed if condition is true
+}
+```
+
+**If-else Statement** :
+Executes one block of code if a condition is true, and another block if it's false.
+```
+if (condition) {
+    // Code to be executed if condition is true
+} else {
+    // Code to be executed if condition is false
+}
+```
+
+Else if Statement :
+Allows you to check multiple conditions sequentially.
+```
+if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition1 is false and condition true
+} else {
+    // Code to be executed if all conditions are false
+}
+```
+
+Switch Statement:
+Compares a value against multiple cases and executes the corresponding code block.
+```
+switch (expression) {
+    case value1:
+        // Code to be executed if expression equals value1
+        break;
+    case value2:
+        // Code to be executed if expression equals value2
+        break;
+    default:
+        // Code to be executed if no case matches
+}
+```
+
+ternary operators continue...
 
 ## Strings
 
