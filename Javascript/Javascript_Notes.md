@@ -2,14 +2,19 @@
 
 ECMAScript is the official name of the language.
 
-## Variable Naming Convention
+## Get Started
+[Variables](#javascript-variables)  
+[Datatypes](#javascript-datatypes)  
+[Operators](#operators)  
+[Conditionals](#conditional-statements)  
 
-$ and _ Allowed  
-No Leading Numbers  
-No Leading Special Characters
 
 ## Javascript Variables
+**Containers for data** : Variables are like storage containers that hold data values.  
+**Dynamic typing** : JavaScript allows you to declare variables without specifying their data type. The type is determined at runtime based on the value assigned to the variable.  
+**Variables are Case Senstive**
 
+### Types of variables
 **Var**
 
 - Global Scope
@@ -26,8 +31,16 @@ No Leading Special Characters
 - Constant (can not change value)
 - Cannot reassign
 
-## Javascript Datatypes
+### Variable Naming Convention
+$ and _ Allowed  
+No Leading Numbers  
+No Leading Special Characters  
 
+## Javascript Datatypes
+**Datatypes** : Define the type of data that a variable can store.  
+**typeof** : The typeof operator returns the data type of a JavaScript variable.
+
+### Primitive Types
 **Strings** - Sequence of characters enclosed in quotes ',",`;
 
 ```
@@ -122,9 +135,24 @@ Relational operators in JavaScript are used to compare two values and return a B
 
 **Less than or equal operator (<=)** : Less than or equal to.
 
+### Logical Operators
+Logical operators are used to combine multiple conditions into a single expression.  
+Types of logical operators:  
+**Logical AND (&&)** : Returns true only if both conditions are true.  
+**Logical OR (||)** : Returns true if at least one condition is true.  
+**Logical NOT (!)** : Reverses the value of a condition (e.g., true becomes false, false becomes true).  
+```
+let age = 25;
+let isStudent = true;
 
-
-### Conditional Statements
+if (age >= 18 && isStudent) {
+  console.log("You are eligible for student discounts.");
+}
+else (age < 18 || !isStudent) {
+  console.log("You are not eligible for student discounts.");
+}
+```
+## Conditional Statements
 Conditional statements allow you to control the flow of your JavaScript code based on specific conditions.
 
 **If Statement** :
@@ -145,7 +173,7 @@ if (condition) {
 }
 ```
 
-Else if Statement :
+**Else if Statement** :
 Allows you to check multiple conditions sequentially.
 ```
 if (condition1) {
@@ -157,7 +185,7 @@ if (condition1) {
 }
 ```
 
-Switch Statement:
+**Switch Statement** :
 Compares a value against multiple cases and executes the corresponding code block.
 ```
 switch (expression) {
@@ -172,7 +200,17 @@ switch (expression) {
 }
 ```
 
-ternary operators continue...
+**Ternary Operator** :
+Short hand if else.  
+Concise way to write an if-else statement in a single line of code.   
+**Syntax** :
+condition ? expression1 : expression2
+```
+let age = 25;
+let message = age >= 18 ? "You are an adult." : "You are a minor.";
+console.log(message);
+```
+
 
 ## Strings
 
