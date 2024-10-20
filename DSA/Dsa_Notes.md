@@ -1,5 +1,21 @@
 # DSA (Data Structures & Algorithms)
 
+## Get Started
+[Space And Time Complexity](#space-and-time-complexity-in-dsa) 
+
+[Data Structures](#data-structures)  
+- [Arrays](#arrays)
+- [ArrayList](#arraylist)
+- [LinkedList](#linked-list)
+- [Stack](#stack)
+- [Queue](#queue)
+- [HashMap](#hashmap)  
+
+[Search Techniques](#search-techniques)
+- [Linear Search](#linear-search)
+- [Binary Search](#binary-search)
+
+
 ## Space and Time Complexity in DSA
 
 In Data Structures and Algorithms (DSA), understanding the efficiency of an algorithm is crucial. This is where space and time complexity come into play.
@@ -56,7 +72,7 @@ Space complexity measures the amount of memory an algorithm uses to solve a prob
 
 ### Linear Data Structures
 
-### Arrays
+### Arrays  [^](#get-started)
 
 Fundamental data structure used to store collections of elements of the same type.
 
@@ -127,11 +143,11 @@ int[][] arr_name = {
 };
 ```
 
-### ArrayList
+### ArrayList [^](#get-started)
 
 - Dynamic Size
 
-### Linked List
+### Linked List [^](#get-started)
 
 - Non-contiguous memory
 - Efficient insertion and deletion
@@ -203,7 +219,7 @@ int[][] arr_name = {
   }
 ```
 
-#### Stack
+### Stack [^](#get-started)
 
 - **Principle:** LIFO (Last In First Out)
 - **Methods:** 
@@ -226,12 +242,12 @@ int[][] arr_name = {
   System.out.println(stack.peek()) //5
   ```
 
-#### Queue
+### Queue [^](#get-started)
 
 - **Principle:** FIFO (First In First Out)
 - **Methods:** add(), offer(), enqueue(), remove(), poll(), dequeue(), peek(), isEmpty()
 
-#### HashMap
+### HashMap [^](#get-started)
 
 - Key and value pair
 - Speed
@@ -256,7 +272,7 @@ System.out.println(cars.keySet()); // [Mercedes, BMW]
 
 ## Search Techniques
 
-### Linear Search
+### Linear Search [^](#get-started)
 
 Input **arr[]** and **target**.  
 Iterates one by one using **for loop**.  
@@ -274,7 +290,7 @@ public static int linearSearch(int[] arr, int target) {
 }
 ```
 
-### Binary Search
+### Binary Search [^](#get-started)
 Check the value in the center of the array.  
 If the target value is lower, search the left half of the array.   
 If the target value is higher, search the right half.
