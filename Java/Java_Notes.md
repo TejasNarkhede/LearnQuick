@@ -91,10 +91,16 @@ System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
 System.out.println(txt.toLowerCase());   // Outputs "hello world"
 ```
 
-- **indexOf():** The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+- **indexOf():** The indexOf() method returns the index (the position) of the **first occurrence** of a specified text in a string (including whitespace):
 ```
 String txt = "Please locate where 'locate' occurs!";
 System.out.println(txt.indexOf("locate")); // Outputs 7
+```
+
+- **lastIndexOf():** This method returns the index of the **last occurrence** of a specified character or substring within a string. If not found, it returns -1.
+```
+String str = "Hello, world!";
+int lastIndex = str.lastIndexOf("o"); // lastIndex will be 8
 ```
 
 - **concat():** method to concatenate two strings
@@ -115,6 +121,18 @@ System.out.println(str.contains("Hello")); //true
 ```
 String str = "Hello World";
 System.out.println(str.replace("World", "String")); // Hello String
+```
+
+- **startsWith() :** This method checks if a string starts with a specified prefix. It returns a boolean value.
+```
+String str = "Hello, world!";
+boolean result = str.startsWith("Hello"); // result will be true
+```
+
+- **endsWith()** : This method checks if a string ends with a specified suffix. It returns a boolean value.
+```
+String str = "Hello, world!";
+boolean result = str.endsWith("world!"); // result will be true
 ```
 
 - **equals():** Compares the value of two strings.
