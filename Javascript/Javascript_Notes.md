@@ -211,6 +211,61 @@ let message = age >= 18 ? "You are an adult." : "You are a minor.";
 console.log(message);
 ```
 
+## Loops
+Loops in JavaScript are **control flow statements** that allow you to repeatedly execute code blocks until a certain condition is met.  
+**Types of loops**
+
+- **for loop :**
+Executes a block of code a specified number of times.
+```
+for (let i = 0; i < 5; i++) {
+    console.log("Iteration " + (i + 1));
+}
+```
+
+- **while loop :**
+Executes a block of code as long as a specified condition is true.
+```
+let count = 1;
+while (count <= 5) {
+    console.log("Count: " + count);
+    count++;
+}
+```
+
+- **do-while loop :**
+Executes a block of code at least once, and then repeatedly as long as a specified condition is true.  
+```
+let num = 1;
+do {
+    console.log("Number: " + num);
+    num++;
+} while (num <= 5);
+```
+
+- **for..in loop :**
+Iterates over the properties of an object.
+```
+const person = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+};
+
+for (let property in person) {
+    console.log(property + ": " + person[property]);
+}
+```
+
+- **for...of loop :**
+Iterates over the values of an iterable object (like arrays, strings, and sets)
+```
+const fruits = ["apple", "banana", "orange"];
+
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+```
 
 ## Strings
 
