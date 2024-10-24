@@ -7,6 +7,9 @@ ECMAScript is the official name of the language.
 [Datatypes](#javascript-datatypes)  
 [Operators](#operators)  
 [Conditionals](#conditional-statements)  
+[Loops](#loops)  
+[Functions](#functions)  
+[Strings](#strings)
 
 
 ## Javascript Variables
@@ -36,7 +39,7 @@ $ and _ Allowed
 No Leading Numbers  
 No Leading Special Characters  
 
-## Javascript Datatypes
+## Javascript Datatypes [^](#get-started)
 **Datatypes** : Define the type of data that a variable can store.  
 **typeof** : The typeof operator returns the data type of a JavaScript variable.
 
@@ -105,7 +108,7 @@ console.log(typeof numbers); // object
 **Tip**
 Use **_typeof_** Operator find the type of a JavaScript variable.
 
-## Operators
+## Operators [^](#get-started)
 
 ### Comparison operators
 Returns true or false (**boolean**)  
@@ -152,7 +155,7 @@ else (age < 18 || !isStudent) {
   console.log("You are not eligible for student discounts.");
 }
 ```
-## Conditional Statements
+## Conditional Statements [^](#get-started)
 Conditional statements allow you to control the flow of your JavaScript code based on specific conditions.
 
 **If Statement** :
@@ -211,7 +214,7 @@ let message = age >= 18 ? "You are an adult." : "You are a minor.";
 console.log(message);
 ```
 
-## Loops
+## Loops [^](#get-started)
 Loops in JavaScript are **control flow statements** that allow you to repeatedly execute code blocks until a certain condition is met.  
 **Types of loops**
 
@@ -267,7 +270,46 @@ for (let fruit of fruits) {
 }
 ```
 
-## Strings
+## Functions [^](#get-started)
+Functions are fundamental **building blocks** in JavaScript.  
+Allows you to encapsulate **reusable code** & organize your program's logic.  
+Essential for creating **modular**, **efficient**, and **maintainable** code.
+
+### Parameters and Arguments:  
+**Parameters :** Variables defined within the function's parentheses that receive values passed to the function when it's called.  
+**Arguments :** The actual values passed to a function when it's called.  
+**Return Values :** Functions can return values using the return keyword.
+The returned value can be used in expressions or assigned to variables.
+
+#### Function declaration  
+```
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("Alice");
+```
+
+#### Function expression
+```
+const add = function(num1, num2) {
+    return num1 + num2;
+};
+const result = add(5, 3);
+console.log(result); // Output: 8
+```
+
+#### Arrow Function
+```
+const square = (num) => {
+    return num * num;
+};
+const squared = square(4);
+console.log(squared); // Output: 16
+```
+
+
+## Strings [^](#get-started)
+Strings are **sequences of characters** enclosed in **single**, **double**, or **backticks**. They are fundamental data types in JavaScript and are used to represent text.
 
 **String Concatenation:** String concatenation is the process of joining two or more strings together using the + operator.
 ```
@@ -275,6 +317,81 @@ let username = "Prakash";
 let age = 99;
 let message = "My name is " + username + " and I am " + age + " years old.";
 console.log(message);
+```
+
+**String Methods**
+
+
+
+
+
+
+
+
+
+
+
+- **length :** Returns the length of the string.
+```
+const str = "Hello, world!";
+// Length
+console.log(str.length); // Output: 13
+```
+
+- **slice(start, end) :** Extracts portion from start index (inclusive) to the specified end index (exclusive).
+```
+const str = "Hello, world!";
+// Slice
+console.log(str.slice(0, 5)); // Output: Hello
+```
+
+- **replace(old, new) :** Replaces all occurrences of the old substring with the new substring.
+```
+const str = "Hello, world!";
+// Replace
+console.log(str.replace("world", "there")); // Output: Hello, there!
+```
+
+- **concat(str1, str2, ...) :** Combines the string with one or more other strings.
+```
+const str = "Hello, world!";
+// Concat
+console.log(str.concat(" How are you?")); // Output: Hello, world! How are you?
+```
+
+- **trim() :** Removes leading and trailing whitespace
+```
+const str = "Hello, world!";
+// Trim
+console.log(str.trim()); // Output: Hello, world!
+```
+
+- **charAt(index) :** Returns the character at the specified index.
+```
+const str = "Hello, world!";
+// CharAt
+console.log(str.charAt(6)); // Output: w
+```
+
+- **indexOf(search, start) :** Returns the index of the first occurrence of the specified search string within the string, starting from the optional start index.
+```
+const str = "Hello, world!";
+// IndexOf
+console.log(str.indexOf("world")); // Output: 7
+```
+
+- **startsWith(search, start) :** Checks if the string starts with the specified search string, starting from the optional start index.
+```
+const str = "Hello, world!";
+// StartsWith
+console.log(str.startsWith("Hello")); // Output: true
+```
+
+- **endsWith(search, length) :** Checks if the string ends with the specified search string, up to the optional length parameter.
+```
+const str = "Hello, world!";
+// EndsWith
+console.log(str.endsWith("!")); // Output: true
 ```
 
 **Template Literals:** Template literals provide a more readable and convenient way to include variables in strings.
