@@ -4,6 +4,7 @@ ECMAScript is the official name of the language.
 
 ## Get Started
 [Variables](#javascript-variables)  
+[Scopes](#scopes)  
 [Datatypes](#javascript-datatypes)  
 [Operators](#operators)  
 [Conditionals](#conditional-statements)  
@@ -38,6 +39,20 @@ ECMAScript is the official name of the language.
 $ and _ Allowed  
 No Leading Numbers  
 No Leading Special Characters  
+
+## Scopes [^](#get-started)
+**Global Scope :**  
+Variables declared outside of any function or block.  
+Accessible from anywhere withtin js code.
+
+**Local Scope (Function Scope) :**  
+Variables declared inside a function have local scope.  
+Only accessible within that function and any **nested functions**.  
+When the function execution ends, the local variables are destroyed.  
+
+**Block Scope (Introduced in ES6) :**  
+Variables declared with **let** or **const** within a block (e.g., if statement, for loop, or a block enclosed in curly braces) have block scope.  
+They are only accessible within that block.
 
 ## Javascript Datatypes [^](#get-started)
 **Datatypes** : Define the type of data that a variable can store.  
