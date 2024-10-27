@@ -336,16 +336,6 @@ console.log(message);
 
 **String Methods**
 
-
-
-
-
-
-
-
-
-
-
 - **length :** Returns the length of the string.
 ```
 const str = "Hello, world!";

@@ -190,10 +190,16 @@ JSP allows you to embed Java code within HTML, making it easier to create dynami
 JSP are extended version of servlet
 
 ### Servlet [^](#get-started)
-
+A **Java class** that extends the capabilities of a web server and responds to incoming requests.  
 A Servlet is a Java class that extends the HttpServlet class or implements the Servlet interface.  
 Servlets handle HTTP requests and generate HTTP responses.  
 They can be used to perform server-side processing, such as database access, business logic, and dynamic content generation.
+
+### Advantages of Servlets
+- **Portability :** Written in Java, so they can run on any platform with a Java Virtual Machine (JVM).
+- **Efficiency :** Servlets are loaded only once when the web server starts, and then reused to handle multiple requests.
+- **Scalability :** Scaled to handle large numbers of requests.
+- **Security :** Secure environment for web applications.
 
 ## JDBC [^](#get-started)
 
