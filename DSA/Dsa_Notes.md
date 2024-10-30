@@ -1,20 +1,22 @@
 # DSA (Data Structures & Algorithms)
 
 ## Get Started
-[Space And Time Complexity](#space-and-time-complexity-in-dsa) 
 
-[Data Structures](#data-structures)  
+[Space And Time Complexity](#space-and-time-complexity-in-dsa)
+
+[Data Structures](#data-structures)
+
 - [Arrays](#arrays)
 - [ArrayList](#arraylist)
 - [LinkedList](#linked-list)
 - [Stack](#stack)
 - [Queue](#queue)
-- [HashMap](#hashmap)  
+- [HashMap](#hashmap)
 
 [Search Techniques](#search-techniques)
+
 - [Linear Search](#linear-search)
 - [Binary Search](#binary-search)
-
 
 ## Space and Time Complexity in DSA
 
@@ -72,7 +74,7 @@ Space complexity measures the amount of memory an algorithm uses to solve a prob
 
 ### Linear Data Structures
 
-### Arrays  [^](#get-started)
+### Arrays [^](#get-started)
 
 Fundamental data structure used to store collections of elements of the same type.
 
@@ -151,7 +153,7 @@ int[][] arr_name = {
 
 - Non-contiguous memory
 - Efficient insertion and deletion
-- **Types:** 
+- **Types:**
   - Singly Linked List
   - Doubly Linked List
   - Circular LinkedList
@@ -222,22 +224,22 @@ int[][] arr_name = {
 ### Stack [^](#get-started)
 
 - **Principle:** LIFO (Last In First Out)
-- **Methods:** 
+- **Methods:**
   - push()
   - **pop()** - Returns top and pops/removes from stack
   ```
-  stack.push("Hey"); 
-  stack.push("I"); 
-  stack.push("Am"); 
-  stack.push("Pop"); 
+  stack.push("Hey");
+  stack.push("I");
+  stack.push("Am");
+  stack.push("Pop");
   System.out.println(stack.pop()) //Pop
   ```
   - **peek()** - Returns first/top element of stack else NULL
   ```
-  stack.push(1); 
-  stack.push(2); 
-  stack.push(3); 
-  stack.push(4); 
+  stack.push(1);
+  stack.push(2);
+  stack.push(3);
+  stack.push(4);
   stack.push(5);
   System.out.println(stack.peek()) //5
   ```
@@ -260,6 +262,7 @@ int[][] arr_name = {
 - get(key)
 
 - **keySet()** - Returns set containing of keys you can traverse it as well
+
 ```
 cars.put("BMW", "M5");
 cars.put("Mercedes", "C63");
@@ -291,23 +294,69 @@ public static int linearSearch(int[] arr, int target) {
 ```
 
 ### Binary Search [^](#get-started)
+
 Check the value in the center of the array.  
-If the target value is lower, search the left half of the array.   
+If the target value is lower, search the left half of the array.  
 If the target value is higher, search the right half.
 
-- The array must be **sorted** for binary search to work.  
-- Binary search is much **faster** than linear search for large arrays.  
+- The array must be **sorted** for binary search to work.
+- Binary search is much **faster** than linear search for large arrays.
 - The time complexity of binary search is **O(log n)**.
 
-
 **Avoiding Overflow** : Instead of using (start + end) / 2 (which can cause overflow if start + end is too large), it safely calculates the middle by:
+
 ```
 int mid = start + (end - start) / 2;
 ```
 
 ### Sorting
 
-- Bubble sort
+- Bubble Sort  
+  Bubble Sort is a simple sorting algorithm that repeatedly iterates through a list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the list is sorted.
+
+Time Complexity:
+
+Best Case: O(n) (when the array is already sorted)
+Average Case: O(n^2)
+Worst Case: O(n^2)
+Space Complexity: O(1) (in-place sorting)
+
+```
+public class BubbleSort {
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            // If no two elements were swapped in this iteration, the array is already sorted
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bubbleSort(arr);
+        System.out.println("Sorted array");
+        for (int i = 0; i < arr.length; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+}
+```
+
 - Selection Sort
 - Insertion Sort
 
