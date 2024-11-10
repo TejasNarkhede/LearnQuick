@@ -10,7 +10,8 @@ ECMAScript is the official name of the language.
 [Conditionals](#conditional-statements)  
 [Loops](#loops)  
 [Functions](#functions)  
-[Strings](#strings)
+[Strings](#strings)  
+[Arrays](#arrays)
 
 
 ## Javascript Variables
@@ -409,3 +410,45 @@ let age = 22;
 let message = `My name is ${username} and I am ${age} years old.`;
 console.log(message);
 ```
+
+## Arrays [^](#get-started)
+Non primitive datatype  
+A way to store and manage collections of data efficiently.
+
+**Creating Arrays - Sqaure brackets [] separate by commas.**
+```
+let students = ["Tejas", "Divya", "Venkat"];
+console.log(students);
+```
+
+**Could add multiple datatypes**
+```
+let mixedArray = ["Prakash", 42, [1, 2, 3], { schoolName: "SIES" }];
+console.log(mixedArray);
+```
+
+**Iterating through Array - regular for loop**
+```
+for(let names of students) {
+    console.log(names);
+}
+```
+
+**Iterating through indices of Array -  for in**
+```
+for(let index in students) {
+    console.log(students[index]);
+}
+```
+
+**Modifying Arrays**
+- **Adding Elements**
+```
+students.push("Khushal");
+```
+
+- **Removing Arrays**
+```
+students.pop();
+```
+
