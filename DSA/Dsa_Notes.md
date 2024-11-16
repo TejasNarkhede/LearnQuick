@@ -309,21 +309,21 @@ If the target value is higher, search the right half.
 int mid = start + (end - start) / 2;
 ```
 
-### Sorting
+## Sorting
 
-- Bubble Sort  
-  Bubble Sort is a simple sorting algorithm that repeatedly iterates through a list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the list is sorted.
+### Bubble Sort [^](#get-started)
 
-Time Complexity:
+Also known as Sinking, Exchange, Inplace sorting algorithm.  
+Swap adjacent values bubbling up highest value.
 
+**Time Complexity:**
 Best Case: O(n) (when the array is already sorted)
 Average Case: O(n^2)
 Worst Case: O(n^2)
 Space Complexity: O(1) (in-place sorting)
 
 ```
-public class BubbleSort {
-    public static void bubbleSort(int[] arr) {
+public static void bubbleSort(int[] arr) {
         int n = arr.length;
         boolean swapped;
 
@@ -345,19 +345,11 @@ public class BubbleSort {
             }
         }
     }
-
-    public static void main(String[] args) {
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
-        bubbleSort(arr);
-        System.out.println("Sorted array");
-        for (int i = 0; i < arr.length; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-}
 ```
 
 - Selection Sort
+
+
 - Insertion Sort
 
 ### Bit Manipulation
