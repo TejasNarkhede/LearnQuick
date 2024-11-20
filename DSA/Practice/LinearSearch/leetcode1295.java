@@ -1,4 +1,4 @@
-public class Leetcode1295 {
+public class leetcode1295 {
     public int findNumbers(int[] nums) {
         int count = 0;
         for (int num : nums) {

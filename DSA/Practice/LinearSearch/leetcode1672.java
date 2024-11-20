@@ -1,4 +1,4 @@
-public class Leetcode1672 {
+public class leetcode1672 {
     public int maximumWealth(int[][] accounts) {
         int maxWealth = 0;
         for (int[] person : accounts) {
