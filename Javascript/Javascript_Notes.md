@@ -452,3 +452,20 @@ students.push("Khushal");
 students.pop();
 ```
 
+Array Methods
+- map  
+Creates a new array with the results of calling a function for every array element:
+```
+let upperCaseNames = studentNames.map(name => name.toUpperCase());
+```
+
+- filter
+Creates a new array with elements that pass a test provided by a function:
+```
+let longNames = studentNames.filter(name => name.length > 5);
+```
+
+
+
+
+
