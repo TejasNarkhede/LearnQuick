@@ -18,6 +18,11 @@
 - [Linear Search](#linear-search)
 - [Binary Search](#binary-search)
 
+[Sorting](#sorting)
+
+- [Bubble Sort](#bubble-sort)
+- [Selection Sort](#selection-sort)
+
 ## Space and Time Complexity in DSA
 
 In Data Structures and Algorithms (DSA), understanding the efficiency of an algorithm is crucial. This is where space and time complexity come into play.
@@ -314,12 +319,14 @@ int mid = start + (end - start) / 2;
 ### Bubble Sort [^](#get-started)
 
 Also known as Sinking, Exchange, Inplace sorting algorithm.  
-Swap adjacent values bubbling up highest value.
+Swap adjacent values bubbling up highest value.  
+Constant Space  
+Stable Sorting Algorithm
 
 **Time Complexity:**
-Best Case: O(n) (when the array is already sorted)
-Average Case: O(n^2)
-Worst Case: O(n^2)
+Best Case: O(n) (when the array is already sorted)  
+Average Case: O(n^2)  
+Worst Case: O(n^2)  
 Space Complexity: O(1) (in-place sorting)
 
 ```
@@ -347,8 +354,32 @@ public static void bubbleSort(int[] arr) {
     }
 ```
 
-- Selection Sort
+### Selection Sort [^](#get-started)
 
+Selection Sort is a comparison-based sorting algorithm. It sorts an array by repeatedly selecting the smallest (or largest) element from the unsorted portion and swapping it with the first unsorted element. This process continues until the entire array is sorted.
+
+- comparsion based
+- select smallest from unsorted and swap
+- O(n) + O(n) = O(n\*n) = O(n2)
+- O(1) constant space - inplace sorting
+- Not stable sorting - doesn't maintain order
+
+```
+public static void selectionSort(int[] arr) {
+  int n = arr.length;
+  for (int i = 0; i < n - 1; i++) {
+    int min_idx = i;
+    for (int j = i + 1; j < n; j++) {
+      if (arr[j] < arr[min_idx]) {
+        min_idx = j;
+      }
+    }
+    int temp = arr[i];
+    arr[i] = arr[min_idx];
+    arr[min_idx] = temp;
+  }
+}
+```
 
 - Insertion Sort
 

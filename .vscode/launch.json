@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "DSA.Practice.SelectionSort.SelectionSort",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "DSA.Practice.BubbleSort.BubbleSort",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
