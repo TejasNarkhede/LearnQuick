@@ -381,7 +381,16 @@ public static void selectionSort(int[] arr) {
 }
 ```
 
-- Insertion Sort
+### Insertion Sort [^](#get-started)
+Iteratively inserting each element into its correct position in a sorted subarray.
+- Stable Sorting - inplace sorting
+- Incremental sorting
+- TC O(n2)
+- SC O(1)
+
+```
+
+```
 
 ### Bit Manipulation
 
