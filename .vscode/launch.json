@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "DSA.Practice.InsertionSort.InsertionSort",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "SelectionSort",
             "request": "launch",
             "mainClass": "DSA.Practice.SelectionSort.SelectionSort",
