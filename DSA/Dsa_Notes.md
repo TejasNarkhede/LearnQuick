@@ -22,6 +22,10 @@
 
 - [Bubble Sort](#bubble-sort)
 - [Selection Sort](#selection-sort)
+- [Insertion Sort](#insertion-sort)
+- [Cycle Sort](#cycle-sort)
+
+[Recursion](#recursion)
 
 ## Space and Time Complexity in DSA
 
@@ -389,8 +393,23 @@ Iteratively inserting each element into its correct position in a sorted subarra
 - SC O(1)
 
 ```
-
+public static void insertionSort(int[] arr) {
+        int n = arr.length;
+        for(int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i-1;
+            while(j >= 0 && arr[j] > key) {
+                arr[j+1] = arr[j];
+                j = j-1;
+            }
+            arr[j+1] = key;
+        }
+    }
 ```
+
+### Cycle Sort [^](#get-started)
+
+## Recursion [^](#get-started)
 
 ### Bit Manipulation
 
