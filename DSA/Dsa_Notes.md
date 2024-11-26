@@ -427,3 +427,8 @@ public static void insertionSort(int[] arr) {
 ### Techniques
 
 - ...
+
+## Algorithms
+
+### Kadane's Algorithm
+Kadane's Algorithm is a dynamic programming technique used to find the maximum subarray sum within a given array of numbers.
