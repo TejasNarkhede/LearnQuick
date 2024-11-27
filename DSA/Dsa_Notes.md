@@ -408,6 +408,9 @@ public static void insertionSort(int[] arr) {
 ```
 
 ### Cycle Sort [^](#get-started)
+Whenever 1 to n use Cyclic Sort  
+Cycle sort is an in-place  
+Unstable Sorting
 
 ## Recursion [^](#get-started)
 
