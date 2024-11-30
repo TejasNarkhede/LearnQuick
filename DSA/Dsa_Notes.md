@@ -413,6 +413,7 @@ Cycle sort is an in-place
 Unstable Sorting
 
 ## Recursion [^](#get-started)
+Recursion is the technique of making a function call itself. (directly or indirectly)
 
 ### Bit Manipulation
 
