@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "CyclicSort",
             "request": "launch",
             "mainClass": "DSA.Practice.CyclicSort.CyclicSort",
