@@ -14,7 +14,6 @@ public class FlappyBird extends Panel {
     Image topPipeImg;
     Image bottomPipeImg;
 
-
     FlappyBird() {
         setPreferredSize(new Dimension(boardWidth, boardHeight));
         // setBackground(Color.blue);
@@ -25,4 +24,14 @@ public class FlappyBird extends Panel {
         topPipeImg = new ImageIcon(getClass().getResource("/toppipe.png")).getImage();
         bottomPipeImg = new ImageIcon(getClass().getResource("/bottompipe.png")).getImage();
     }
+    
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        draw(g);
+    }
+    
+    public void draw(Graphics g) {
+        g.drawImage(backgroundImg, 0, 0, boardWidth, boardHeight, null);
+    }
 }
+
