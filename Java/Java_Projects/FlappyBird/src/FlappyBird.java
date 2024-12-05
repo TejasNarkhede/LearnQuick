@@ -1,11 +1,10 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.nio.channels.Pipe;
-import java.util.ArrayList; //pipes
-import java.util.Random; // pipe placement randomize
+import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.*;
 
-public class FlappyBird extends Panel {
+public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     int boardWidth = 360;
     int boardHeight = 640;
 
@@ -115,7 +114,7 @@ public class FlappyBird extends Panel {
     }
 
     public void paintComponent(Graphics g) {
-        super.paintComponents(g);
+        super.paintComponent(g);
         draw(g);
     }
 
@@ -165,5 +164,50 @@ public class FlappyBird extends Panel {
         if (bird.y > boardHeight) {
             gameOver = true;
         }
+    }
+
+    boolean collision(Bird a, Pipe b) {
+        return a.x < b.x + b.width && // a's top left corner doesn't reach b's top right corner
+                a.x + a.width > b.x && // a's top right corner passes b's top left corner
+                a.y < b.y + b.height && // a's top left corner doesn't reach b's bottom left corner
+                a.y + a.height > b.y; // a's bottom left corner passes b's top left corner
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) { // called every x milliseconds by gameLoop timer
+        move();
+        repaint();
+        if (gameOver) {
+            placePipeTimer.stop();
+            gameLoop.stop();
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            // System.out.println("JUMP!");
+            velocityY = -9;
+
+            if (gameOver) {
+                // restart game by resetting conditions
+                bird.y = birdY;
+                velocityY = 0;
+                pipes.clear();
+                gameOver = false;
+                score = 0;
+                gameLoop.start();
+                placePipeTimer.start();
+            }
+        }
+    }
+
+    // not needed
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
     }
 }
