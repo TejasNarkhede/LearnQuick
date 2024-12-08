@@ -12,7 +12,7 @@
 [Math](#java-math)
 [JSP](#jsp)  
 [Servlet](#servlet)  
-[JDBC](#jdbc)  
+[JDBC](#jdbc)
 
 ## Memory Management
 
@@ -153,6 +153,9 @@ boolean result = str.endsWith("world!"); // result will be true
 
 - **==:** Compares the references of two strings.
 
+### Strings Vs StringBuilder Vs StringBuffer [^](#get-started)
+![Strings Vs StringBuilder Vs StringBuffer](Notesimages\StringsBuilderBuffer.png)
+
 ### OOPS (Object-Oriented Programming) [^](#get-started)
 
 - **Encapsulation:** Bundling data and methods within a class.
@@ -161,6 +164,18 @@ boolean result = str.endsWith("world!"); // result will be true
 - **Polymorphism:** Ability of objects to take on multiple forms.
 
 ## Miscellaneous
+
+### Acesss Specifiers / Modifiers [^](#get-started)
+
+Control the visibility and accessibility of classes, methods, and variables.  
+1. **Public** : Accessible to: Any class in any package.
+Keyword: public
+2. **Protected** : Accessible to: Classes within the same package, subclasses in any package.
+Keyword: protected
+3. **Default (Package-Private)** : Accessible to: Classes within the same package.
+No keyword: If no access specifier is used, it defaults to package-private.
+4. **Private** : Accessible to: Only within the same class.
+Keyword: private
 
 ### Java Math [^](#get-started)
 
@@ -190,12 +205,14 @@ JSP allows you to embed Java code within HTML, making it easier to create dynami
 JSP are extended version of servlet
 
 ### Servlet [^](#get-started)
+
 A **Java class** that extends the capabilities of a web server and responds to incoming requests.  
 A Servlet is a Java class that extends the HttpServlet class or implements the Servlet interface.  
 Servlets handle HTTP requests and generate HTTP responses.  
 They can be used to perform server-side processing, such as database access, business logic, and dynamic content generation.
 
 ### Advantages of Servlets
+
 - **Portability :** Written in Java, so they can run on any platform with a Java Virtual Machine (JVM).
 - **Efficiency :** Servlets are loaded only once when the web server starts, and then reused to handle multiple requests.
 - **Scalability :** Scaled to handle large numbers of requests.
@@ -224,7 +241,6 @@ Acts like a **bridge** between java applications and various database system
   **Execute SQL statements**: Execute SQL queries using executeQuery(), executeUpdate(), or execute().
 - **Process results**: Iterate over the ResultSet object to extract and process the query results.
 - **Close resources**: Close the ResultSet, Statement, and Connection objects to release database resources.
-
 
 ```
 import java.sql.*;
