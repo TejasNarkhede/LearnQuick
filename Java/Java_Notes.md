@@ -158,7 +158,15 @@ boolean result = str.endsWith("world!"); // result will be true
 
 ### OOPS (Object-Oriented Programming) [^](#get-started)
 
-- **Encapsulation:** Bundling data and methods within a class.
+- **Encapsulation:**  
+Fundamental principle of object-oriented programming.   
+Involves bundling data (variables) and the methods within a single unit, a class. 
+Features -
+Data Hiding
+Abstraction
+Maintainability
+Flexible
+
 - **Abstraction:** Hiding unnecessary details from the user.
 - **Inheritance:** Creating new classes based on existing ones.
 - **Polymorphism:** Ability of objects to take on multiple forms.
@@ -194,6 +202,10 @@ The Java Math class has many methods that allows you to perform mathematical tas
 ```
 int randomNum = (int)(Math.random() * 101);  // 0 to 100
 ```
+
+Synchronized
+Thread safe
+Serialization
 
 ### JSP [^](#get-started)
 
