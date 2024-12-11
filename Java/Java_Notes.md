@@ -9,6 +9,7 @@
 [Strings](#strings)  
 [OOPS](#oops-object-oriented-programming)  
 [Miscellaneous](#miscellaneous)  
+[Multi-Threading](#multi-threading)  
 [Math](#java-math)
 [JSP](#jsp)  
 [Servlet](#servlet)  
@@ -203,8 +204,37 @@ The Java Math class has many methods that allows you to perform mathematical tas
 int randomNum = (int)(Math.random() * 101);  // 0 to 100
 ```
 
-Synchronized
-Thread safe
+### Multi-Threading [^](#get-started)
+
+#### Synchronization in Java
+Synchronization in Java is a mechanism that ensures only one thread can access a shared resource at a time, preventing data inconsistency and race conditions.  
+
+**Importance :** 
+- **Thread Interference :**
+When multiple threads access shared data concurrently, their operations might interleave, leading to unexpected and incorrect results.
+- **Memory Consistency Errors :**
+Without proper synchronization, the compiler or processor might reorder instructions, leading to inconsistent data views across different threads.  
+
+**Synchronized Keyword :**
+Declaring a method as synchronized ensures that only one thread can execute the method at a time on the same object.
+```
+public synchronized void increment() {
+    count++;
+}
+```
+
+#### Thread safe
+In Java, thread safety means that a piece of code can be accessed by multiple threads concurrently without causing data corruption or unexpected results.
+
+**Achieve Thread Safety in Java**
+- **1 Synchronization**
+- **2 Atomic variables**
+- **3 Immutable Objects**
+- **4 Thread Confinement**
+- **5 Read-only date**
+- **6 Avoiding Shared state**
+- **7 Testing**
+
 Serialization
 
 ### JSP [^](#get-started)
