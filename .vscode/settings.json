@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "Java/Java_Projects/FlappyBird/src",
         "DSA/Practice/Strings",
-        "DSA/Practice/BinarySearch"
+        "DSA/Practice/BinarySearch",
+        "DSA/Practice/Arrays"
     ],
     "java.project.referencedLibraries": []
 }

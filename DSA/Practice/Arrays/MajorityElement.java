@@ -1,5 +1,3 @@
-package DSA.Practice.Arrays;
-
 // import java.util.Arrays;
 import java.util.HashMap;
 
@@ -107,6 +105,7 @@ public class MajorityElement {
 // Moore's Voting Algo
 // TC O(nlogn)
 // SC O(1)
+@SuppressWarnings("unused")
 public class MajorityElement {
     public static int majorityElement(int[] arr) {
         
