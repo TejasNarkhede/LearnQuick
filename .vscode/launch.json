@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RunningSumArray",
+            "request": "launch",
+            "mainClass": "RunningSumArray",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "ArrayConcatenation",
+            "request": "launch",
+            "mainClass": "ArrayConcatenation",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "ArrayPermutation",
+            "request": "launch",
+            "mainClass": "ArrayPermutation",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "NumberOfOccurrences",
             "request": "launch",
             "mainClass": "NumberOfOccurrences",
