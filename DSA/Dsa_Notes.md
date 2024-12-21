@@ -411,6 +411,7 @@ public static void insertionSort(int[] arr) {
 Whenever 1 to n use Cyclic Sort  
 Cycle sort is an in-place  
 Unstable Sorting
+public static void cyclicSort(int[] nums) { int i = 0; while (i < nums.length) { // The correct index for nums[i] is nums[i] - 1 int correctIndex = nums[i] - 1; if (nums[i] != nums[correctIndex]) { // Swap nums[i] with nums[correctIndex] int temp = nums[i]; nums [i] = nums[correctIndex]; nums [correctIndex] = temp; } else { i++;
 
 ## Recursion [^](#get-started)
 Recursion is the technique of making a function call itself. (directly or indirectly)
