@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InfiniteArray",
+            "request": "launch",
+            "mainClass": "InfiniteArray",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "RunningSumArray",
             "request": "launch",
             "mainClass": "RunningSumArray",
