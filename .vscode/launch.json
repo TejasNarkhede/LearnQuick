@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "src.App",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "InfiniteArray",
             "request": "launch",
             "mainClass": "InfiniteArray",
