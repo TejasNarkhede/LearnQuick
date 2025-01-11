@@ -1,9 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Java/Java_Projects/FlappyBird/src",
-        "DSA/Practice/Strings",
-        "DSA/Practice/BinarySearch",
-        "DSA/Practice/Arrays"
+        "../../Desktop/Github/LearnQuick/Java/Java_Projects/TicTacToe",
+        "Java/Java_Projects/TicTacToe/src"
     ],
     "java.project.referencedLibraries": []
 }
