@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TicTacToe",
+            "request": "launch",
+            "mainClass": "TicTacToe",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "src.App",
