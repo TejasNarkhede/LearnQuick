@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Random;
 
 public class TicTacToe {
 
@@ -23,34 +24,92 @@ public class TicTacToe {
             System.out.print("Enter your placement (1-9): ");
             int user_pos = sc.nextInt();
             while (ur_set.contains(user_pos) || comp_set.contains(user_pos)) {
-                System.out.println();
                 System.out.println("Position taken! Enter a correct position");
                 user_pos = sc.nextInt();
             }
             p_holder(g_board, user_pos, "You");
-            String res = check_winnner();
+            String res = check_winner();
             if (res.length() > 0) {
+                print_board(g_board);
                 System.out.println(res);
                 break;
             }
 
             int cpu_pos = get_random();
             while (ur_set.contains(cpu_pos) || comp_set.contains(cpu_pos)) {
-                // System.out.println();
-                // System.out.println("Position taken! Enter a correct position");
                 cpu_pos = get_random();
             }
             p_holder(g_board, cpu_pos, "Comp");
-            res = check_winnner();
+            res = check_winner();
             if (res.length() > 0) {
+                print_board(g_board);
                 System.out.println(res);
                 break;
             }
+
+            print_board(g_board);
         }
 
+        sc.close();
     }
 
-    static String check_winnner() {
+    static void print_board(char[][] board) {
+        for (char[] row : board) {
+            for (char c : row) {
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+    }
+
+    static void p_holder(char[][] board, int pos, String user) {
+        char symbol = 'X';
+        if (user.equals("Comp")) {
+            symbol = 'O';
+            comp_set.add(pos);
+        } else {
+            ur_set.add(pos);
+        }
+
+        switch (pos) {
+            case 1:
+                board[0][0] = symbol;
+                break;
+            case 2:
+                board[0][2] = symbol;
+                break;
+            case 3:
+                board[0][4] = symbol;
+                break;
+            case 4:
+                board[2][0] = symbol;
+                break;
+            case 5:
+                board[2][2] = symbol;
+                break;
+            case 6:
+                board[2][4] = symbol;
+                break;
+            case 7:
+                board[4][0] = symbol;
+                break;
+            case 8:
+                board[4][2] = symbol;
+                break;
+            case 9:
+                board[4][4] = symbol;
+                break;
+            default:
+                break;
+        }
+    }
+
+    static int get_random() {
+        Random rand = new Random();
+        return rand.nextInt(9) + 1;
+    }
+
+    static String check_winner() {
         HashSet<Integer> r1 = new HashSet<Integer>();
         r1.add(1);
         r1.add(2);
@@ -94,78 +153,18 @@ public class TicTacToe {
         set.add(d1);
         set.add(d2);
 
-        for (HashSet<Integer> s : set) {
-            if (ur_set.containsAll(s)) {
+        for (HashSet c : set) {
+            if (ur_set.containsAll(c)) {
                 return "Congratulations! You won!";
-            } else if (comp_set.containsAll(s)) {
-                return "Computer wins! Better luck next time!";
-            }
-
-            if (ur_set.size() + comp_set.size() == 9) {
-                return "It's a tie!";
+            } else if (comp_set.containsAll(c)) {
+                return "Computer wins! Sorry :(";
             }
         }
+
+        if (ur_set.size() + comp_set.size() == 9) {
+            return "It's a draw!";
+        }
+
         return "";
-
     }
-
-    static int get_random() {
-        return (int) (Math.random() * 9) + 1;
-    }
-
-    static void print_board(char[][] board) {
-        for (int r = 0; r < board.length; r++) {
-            for (int c = 0; c < board[r].length; c++) {
-                System.out.print(board[r][c]);
-            }
-            System.out.println();
-        }
-    }
-
-    static void p_holder(char[][] g_board, int pos, String user) {
-        char syb = 'X';
-        if (user.equals("You")) {
-            syb = 'X';
-            ur_set.add(pos);
-        } else if (user.equals("Comp")) {
-            syb = 'O';
-            comp_set.add(pos);
-        }
-
-        switch (pos) {
-            case 1:
-                g_board[0][0] = syb;
-                break;
-            case 2:
-                g_board[0][2] = syb;
-                break;
-            case 3:
-                g_board[0][4] = syb;
-                break;
-            case 4:
-                g_board[2][0] = syb;
-                break;
-            case 5:
-                g_board[2][2] = syb;
-                break;
-            case 6:
-                g_board[0][4] = syb;
-                break;
-            case 7:
-                g_board[4][0] = syb;
-                break;
-            case 8:
-                g_board[4][2] = syb;
-                break;
-            case 9:
-                g_board[4][4] = syb;
-                break;
-
-            default:
-                System.out.println("Invalid position");
-        }
-
-        print_board(g_board);
-    }
-
 }
