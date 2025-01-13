@@ -14,7 +14,9 @@
 [JSP](#jsp)  
 [Servlet](#servlet)  
 [JDBC](#jdbc)  
-[Restful API](#restful-api)
+[Restful API](#restful-api)  
+[SpringBoot](#springboot)  
+[OAuth2.0](#oauth20)  
 
 ## Memory Management
 
@@ -356,3 +358,29 @@ C - Create - POST
 R - Read - GET
 U - Update - PUT/PATCH
 D - Delete - DELETE
+
+## Spring Boot [^](#get-started)
+Spring Boot is an extension of the Spring framework that simplifies the setup of new Spring applications. It provides defaults for code and annotation configuration to quickly start new Spring projects.
+
+- **Auto Configuration**: Automatically configures your Spring application based on the jar dependencies you have added.
+- **Standalone**: Spring Boot applications can be run independently using the embedded server.
+- **Production-ready**: Includes features like health checks, metrics, and externalized configuration.
+
+### Spring MVC
+Spring MVC (Model-View-Controller) is a framework for building web applications. It separates the application into three interconnected components.
+
+- **Model**: Represents the application's data and business logic.
+- **View**: Represents the presentation layer (UI).
+- **Controller**: Handles user input and interacts with the model to render the appropriate view.
+
+### Three-Tier Architecture
+Three-tier architecture is a client-server software architecture pattern that separates the application into three logical layers.
+
+1. **Presentation Layer**: The user interface layer, which interacts with the user.
+2. **Business Logic Layer**: The application layer, which processes data between the presentation and data layers.
+3. **Data Layer**: The database layer, which stores and retrieves data.
+
+## OAuth2.0 [^](#get-started)
+In Short Term Sign in google facility  
+Open Authorization / Authorization Protocol  
+JSON Web Token (JWT) - Access Token
