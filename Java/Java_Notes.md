@@ -13,7 +13,8 @@
 [Math](#java-math)
 [JSP](#jsp)  
 [Servlet](#servlet)  
-[JDBC](#jdbc)
+[JDBC](#jdbc)  
+[Restful API](#restful-api)
 
 ## Memory Management
 
@@ -155,18 +156,19 @@ boolean result = str.endsWith("world!"); // result will be true
 - **==:** Compares the references of two strings.
 
 ### Strings Vs StringBuilder Vs StringBuffer [^](#get-started)
+
 ![Strings Vs StringBuilder Vs StringBuffer](Notesimages\StringsBuilderBuffer.png)
 
 ### OOPS (Object-Oriented Programming) [^](#get-started)
 
 - **Encapsulation:**  
-Fundamental principle of object-oriented programming.   
-Involves bundling data (variables) and the methods within a single unit, a class. 
-Features -
-Data Hiding
-Abstraction
-Maintainability
-Flexible
+  Fundamental principle of object-oriented programming.  
+  Involves bundling data (variables) and the methods within a single unit, a class.
+  Features -
+  Data Hiding
+  Abstraction
+  Maintainability
+  Flexible
 
 - **Abstraction:** Hiding unnecessary details from the user.
 - **Inheritance:** Creating new classes based on existing ones.
@@ -176,15 +178,16 @@ Flexible
 
 ### Acesss Specifiers / Modifiers [^](#get-started)
 
-Control the visibility and accessibility of classes, methods, and variables.  
+Control the visibility and accessibility of classes, methods, and variables.
+
 1. **Public** : Accessible to: Any class in any package.
-Keyword: public
+   Keyword: public
 2. **Protected** : Accessible to: Classes within the same package, subclasses in any package.
-Keyword: protected
+   Keyword: protected
 3. **Default (Package-Private)** : Accessible to: Classes within the same package.
-No keyword: If no access specifier is used, it defaults to package-private.
+   No keyword: If no access specifier is used, it defaults to package-private.
 4. **Private** : Accessible to: Only within the same class.
-Keyword: private
+   Keyword: private
 
 ### Java Math [^](#get-started)
 
@@ -207,16 +210,19 @@ int randomNum = (int)(Math.random() * 101);  // 0 to 100
 ### Multi-Threading [^](#get-started)
 
 #### Synchronization in Java
-Synchronization in Java is a mechanism that ensures only one thread can access a shared resource at a time, preventing data inconsistency and race conditions.  
 
-**Importance :** 
+Synchronization in Java is a mechanism that ensures only one thread can access a shared resource at a time, preventing data inconsistency and race conditions.
+
+**Importance :**
+
 - **Thread Interference :**
-When multiple threads access shared data concurrently, their operations might interleave, leading to unexpected and incorrect results.
+  When multiple threads access shared data concurrently, their operations might interleave, leading to unexpected and incorrect results.
 - **Memory Consistency Errors :**
-Without proper synchronization, the compiler or processor might reorder instructions, leading to inconsistent data views across different threads.  
+  Without proper synchronization, the compiler or processor might reorder instructions, leading to inconsistent data views across different threads.
 
 **Synchronized Keyword :**
 Declaring a method as synchronized ensures that only one thread can execute the method at a time on the same object.
+
 ```
 public synchronized void increment() {
     count++;
@@ -224,9 +230,11 @@ public synchronized void increment() {
 ```
 
 #### Thread safe
+
 In Java, thread safety means that a piece of code can be accessed by multiple threads concurrently without causing data corruption or unexpected results.
 
 **Achieve Thread Safety in Java**
+
 - **1 Synchronization**
 - **2 Atomic variables**
 - **3 Immutable Objects**
@@ -319,3 +327,32 @@ public class JDBCExample {
     }
 }
 ```
+
+## RESTful API [^](#get-started)
+
+RESTful API (Representational State Transfer)
+
+- Relies on Server Client Architecture, stateless protocol
+- Everything in a RESTful API is considered a resource, which can be a document, image...
+- The server does not store any state about the client session on the server side.
+
+Client-Server Architecture: The client and server are separate entities. The client sends requests to the server, and the server processes these requests and returns the appropriate responses.
+
+HTTTP - (Hypertext transfer protocol)  
+HTTP Methods: RESTful APIs use standard HTTP methods to perform operations on resources:
+
+- GET/user: Retrieve a resource.
+- POST/user: Create a new resource.
+- PUT/user: Update an existing resource.
+- PATCH/user: Partial Updates
+- DELETE/user: Remove a resource.
+
+Best Practices
+Post/updateUser x | PATCH/user  ✓
+Post/createUser x | POST/user   ✓
+GET/getUser     x | GET/user    ✓
+
+C - Create - POST
+R - Read - GET
+U - Update - PUT/PATCH
+D - Delete - DELETE
