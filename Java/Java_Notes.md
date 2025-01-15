@@ -7,6 +7,7 @@
 [Variables](#variables)  
 [Arrays](#arrays)  
 [Strings](#strings)  
+[Interfaces](#interfaces)
 [OOPS](#oops-object-oriented-programming)  
 [Miscellaneous](#miscellaneous)  
 [Multi-Threading](#multi-threading)  
@@ -15,8 +16,8 @@
 [Servlet](#servlet)  
 [JDBC](#jdbc)  
 [Restful API](#restful-api)  
-[SpringBoot](#springboot)  
-[OAuth2.0](#oauth20)  
+[SpringBoot](#spring-boot)  
+[OAuth2.0](#oauth20)
 
 ## Memory Management
 
@@ -160,6 +161,31 @@ boolean result = str.endsWith("world!"); // result will be true
 ### Strings Vs StringBuilder Vs StringBuffer [^](#get-started)
 
 ![Strings Vs StringBuilder Vs StringBuffer](Notesimages\StringsBuilderBuffer.png)
+
+### Interfaces [^](#get-started)
+Is a reference type that can contain only constants, default methods, which are implicitly public and abstract.  
+Can not instantiated but implemented by classes.  
+By default public and abstract.  
+Variables are final and static.  
+This mechanism supports abstraction and multiple inheritance (enabling class to implement multiple interfaces
+and inherit their behaviours).
+
+```
+public interface Animal {
+    void eat();
+    void sleep();
+}
+```
+
+#### implements Keyword
+The `implements` keyword is used by a class to implement an interface.  
+It becomes compulsory to implement all abstract methods.
+
+#### Types of Interfaces
+- Normal Interface
+- Functional/SAM (Single abstract method) Interface
+- Marker Interface
+
 
 ### OOPS (Object-Oriented Programming) [^](#get-started)
 
@@ -350,9 +376,9 @@ HTTP Methods: RESTful APIs use standard HTTP methods to perform operations on re
 - DELETE/user: Remove a resource.
 
 Best Practices
-Post/updateUser x | PATCH/user  ✓
-Post/createUser x | POST/user   ✓
-GET/getUser     x | GET/user    ✓
+Post/updateUser x | PATCH/user ✓
+Post/createUser x | POST/user ✓
+GET/getUser x | GET/user ✓
 
 C - Create - POST
 R - Read - GET
@@ -360,13 +386,79 @@ U - Update - PUT/PATCH
 D - Delete - DELETE
 
 ## Spring Boot [^](#get-started)
+
+Spring Boot is the quickest and most popular way to start Spring projects.  
+No need for much code or configuration.
 Spring Boot is an extension of the Spring framework that simplifies the setup of new Spring applications. It provides defaults for code and annotation configuration to quickly start new Spring projects.
 
 - **Auto Configuration**: Automatically configures your Spring application based on the jar dependencies you have added.
 - **Standalone**: Spring Boot applications can be run independently using the embedded server.
 - **Production-ready**: Includes features like health checks, metrics, and externalized configuration.
 
+### Annotations
+
+Are metadata used to provide additional information about classes, methods, and fields.  
+Helps in configuring and managing componenets.
+
+### @RestController
+
+A specialized version of the Spring MVC Controller, Designed for building RESTful web services.  
+It combines the functionality of `@Controller` and `@ResponseBody`, meaning that the methods in a `@RestController` return data directly instead of a view.
+
+### @GetMapping
+
+Used to handle HTTP GET requests.  
+It is a composed annotation that acts as a shortcut for `@RequestMapping(method = RequestMethod.GET)`.
+It is typically used to retrieve data from the server.
+
+```
+@GetMapping("/example")
+public ResponseEntity<String> getExample() {
+    return ResponseEntity.ok("GET Response");
+}
+```
+
+### @PostMapping
+
+Used to handle HTTP POST requests.  
+It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.POST).  
+It is typically used to create new resources on the server.
+
+```
+@PostMapping("/example")
+public ResponseEntity<String> postExample(@RequestBody String request) {
+    return ResponseEntity.ok("POST Response");
+}
+```
+
+### @PutMapping
+
+Used to handle HTTP PUT requests.  
+It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.PUT).  
+It is typically used to update existing resources on the server.
+
+```
+@PutMapping("/example")
+public ResponseEntity<String> putExample(@RequestBody String request) {
+    return ResponseEntity.ok("PUT Response");
+}
+```
+
+### @DeleteMapping
+
+Used to handle HTTP DELETE requests.  
+It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.DELETE).  
+It is typically used to delete resources on the server.
+
+```
+@DeleteMapping("/example")
+public ResponseEntity<String> deleteExample() {
+    return ResponseEntity.ok("DELETE Response");
+}
+```
+
 ### Spring MVC
+
 Spring MVC (Model-View-Controller) is a framework for building web applications. It separates the application into three interconnected components.
 
 - **Model**: Represents the application's data and business logic.
@@ -374,6 +466,7 @@ Spring MVC (Model-View-Controller) is a framework for building web applications.
 - **Controller**: Handles user input and interacts with the model to render the appropriate view.
 
 ### Three-Tier Architecture
+
 Three-tier architecture is a client-server software architecture pattern that separates the application into three logical layers.
 
 1. **Presentation Layer**: The user interface layer, which interacts with the user.
@@ -381,6 +474,7 @@ Three-tier architecture is a client-server software architecture pattern that se
 3. **Data Layer**: The database layer, which stores and retrieves data.
 
 ## OAuth2.0 [^](#get-started)
+
 In Short Term Sign in google facility  
 Open Authorization / Authorization Protocol  
 JSON Web Token (JWT) - Access Token
