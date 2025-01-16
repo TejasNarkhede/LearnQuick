@@ -92,6 +92,21 @@ Attributes:
 <img src="image.jpg" alt="Description of image">
 ```
 
+### Pre tag
+### HTML Pre Tag
+
+The `<pre>` tag is used to display preformatted text.  
+Text inside a `<pre>` element is displayed in a fixed-width font (usually Courier),  
+And it preserves both spaces and line breaks.
+
+```
+<pre>
+This is preformatted text.
+    It preserves spaces and
+    line breaks.
+</pre>
+```
+
 ### HTML Target Attribute
 
 The target attribute specifies where to open the linked document.
@@ -200,13 +215,85 @@ Common type values:
 - **submit:** Submit button.
 - **radio:** Radio button.
 - **checkbox:** Checkbox.
+- **placeholder:** Provides a hint to the user of what can be entered in the input field.
+- **required:** Indicates that the input field must be filled out before submitting the form.
+- **value:** Specifies the initial value of the input element.
 
-```
+Example:
+```html
 <form action="/submit-form">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
     <input type="submit" value="Submit">
 </form>
 ```
 
-...continued
+### HTML Button Tag
+The <button> tag defines a clickable button.  
+It can contain text or images, and it can be used to submit forms or trigger JavaScript functions.
+- type: Specifies the type of button. Common type values include:
+- button: A clickable button that does not submit the form.
+- submit: A button that submits the form.
+- reset: A button that resets the form fields to their initial values.
+
+```
+<button type="button" onclick="alert('Button clicked!')">Click Me!</button>
+```
+
+### HTML Radio Button
+The <input type="radio"> tag is used to create a radio button.  
+Radio buttons allow the user to select one option from a set.
+name: Groups radio buttons together. Only one radio button in a group can be selected at a time.
+value: Specifies the value that will be submitted if the radio button is selected.
+Example:
+```
+<form action="/submit-form">
+    <label for="option1">Option 1:</label>
+    <input type="radio" id="option1" name="options" value="1">
+    <label for="option2">Option 2:</label>
+    <input type="radio" id="option2" name="options" value="2">
+    <input type="submit" value="Submit">
+</form>
+```
+
+### HTML Label Tag
+The <label> tag defines a label for an <input> element. It improves the usability of forms by making it easier to select input fields.  
+Specifies which form element a label is bound to. The value should match the id of the input element.
+```
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+```
+
+### HTML ID Attribute
+The id attribute specifies a unique identifier for an HTML element.  
+It is used to link labels to input elements and to apply styles or scripts to specific elements.
+```
+<input type="text" id="name" name="name">
+<label for="name">Name:</label>
+```
+
+### HTML Fieldset Tag
+The <fieldset> tag is used to group related elements in a form.  
+It helps to organize complex forms and improve accessibility.
+```
+<fieldset>
+    <legend>Personal Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+</fieldset>
+```
+
+### HTML Legend Tag
+The <legend> tag defines a caption for the <fieldset> element. It provides a title for the grouped elements.  
+```
+<fieldset>
+    <legend>Personal Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+</fieldset>
+```
+
