@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "../../Desktop/Github/LearnQuick/Java/Java_Projects/TicTacToe",
-        "Java/Java_Projects/TicTacToe/src"
+        "Java/Java_Projects/Employee Payroll System/src"
     ],
     "java.project.referencedLibraries": []
 }
