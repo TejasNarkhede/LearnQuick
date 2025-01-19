@@ -416,6 +416,30 @@ public static void cyclicSort(int[] nums) { int i = 0; while (i < nums.length) {
 ## Recursion [^](#get-started)
 Recursion is the technique of making a function call itself. (directly or indirectly)
 
+**Halting Condition:** When function stops calling itself.
+
+### Why? 
+- Helps solve complex problems
+- Can convert recursive functions into iterative functions, vice-versa
+- Space Complexity is not constant
+- Break complex problems into smaller solutions
+
+### **Recursive formula: Recurrence relation \( Fn = (n-1) + F(n-2) \)**
+
+### How to approach recursion
+- Break problems into smaller issues
+- write recurrence relation
+- Draw recursive tree
+- TREE 
+  - Observe Flow
+  - Identify left/right tree calls
+  - use debugger
+- Observe how value returns (dont forget to return if void)
+
+### **When you have return type make sure you return it**
+
+
+
 ### Bit Manipulation
 
 #### Decimal To Binary

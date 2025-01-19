@@ -229,7 +229,7 @@ Example:
 ```
 
 ### HTML Button Tag
-The <button> tag defines a clickable button.  
+The `<button>` tag defines a clickable button.  
 It can contain text or images, and it can be used to submit forms or trigger JavaScript functions.
 - type: Specifies the type of button. Common type values include:
 - button: A clickable button that does not submit the form.
@@ -241,7 +241,7 @@ It can contain text or images, and it can be used to submit forms or trigger Jav
 ```
 
 ### HTML Radio Button
-The <input type="radio"> tag is used to create a radio button.  
+The `<input type="radio">` tag is used to create a radio button.  
 Radio buttons allow the user to select one option from a set.
 name: Groups radio buttons together. Only one radio button in a group can be selected at a time.
 value: Specifies the value that will be submitted if the radio button is selected.
@@ -257,7 +257,7 @@ Example:
 ```
 
 ### HTML Label Tag
-The <label> tag defines a label for an <input> element. It improves the usability of forms by making it easier to select input fields.  
+The `<label>` tag defines a label for an `<input>` element. It improves the usability of forms by making it easier to select input fields.  
 Specifies which form element a label is bound to. The value should match the id of the input element.
 ```
 <label for="name">Name:</label>
@@ -273,7 +273,7 @@ It is used to link labels to input elements and to apply styles or scripts to sp
 ```
 
 ### HTML Fieldset Tag
-The <fieldset> tag is used to group related elements in a form.  
+The `<fieldset>` tag is used to group related elements in a form.  
 It helps to organize complex forms and improve accessibility.
 ```
 <fieldset>
@@ -286,7 +286,8 @@ It helps to organize complex forms and improve accessibility.
 ```
 
 ### HTML Legend Tag
-The <legend> tag defines a caption for the <fieldset> element. It provides a title for the grouped elements.  
+The `<legend>` tag defines a caption for the `<fieldset>` element. It provides a title for the grouped elements.  
+
 ```
 <fieldset>
     <legend>Personal Information</legend>
