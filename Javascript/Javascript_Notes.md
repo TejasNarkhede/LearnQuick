@@ -1,9 +1,11 @@
 # Javascript
 
-ECMAScript is the official name of the language.
+**ECMAScript** is the official name of the language.  
+In Javascript, **lexical structure** refers to the syntax and set of rules that define how code is written and interpreted.
 
 ## Get Started
 [Variables](#javascript-variables)  
+[Type Conversion](#type-conversion)  
 [Scopes](#scopes)  
 [Datatypes](#javascript-datatypes)  
 [Operators](#operators)  
@@ -40,6 +42,173 @@ ECMAScript is the official name of the language.
 $ and _ Allowed  
 No Leading Numbers  
 No Leading Special Characters  
+
+## Type Conversion [^](#get-started)
+
+Type conversion in JavaScript refers to the process of converting a value from one data type to another. This can happen either implicitly (automatically by JavaScript) or explicitly (manually by the developer).
+
+#### 1. **Implicit Type Conversion (Type Coercion)**
+
+JavaScript performs type coercion when an operation requires a certain type but encounters a different type. It automatically converts one type into another.
+
+##### Examples:
+
+- **String + Number (concatenation):**
+  ```javascript
+  let result = '5' + 2;   // '52' (Number 2 is coerced to string)
+  ```
+  
+- **Number + String (coercion happens here too):**
+  ```javascript
+  let result = 2 + '5';   // '25' (Number 2 is coerced to string)
+  ```
+
+- **Boolean Coercion:**
+  JavaScript coerces values to booleans in conditional statements.
+  ```javascript
+  if ('') {
+    console.log('This won\'t run');
+  } else {
+    console.log('Empty string is falsy');
+  }
+  // Output: Empty string is falsy
+  ```
+
+- **Comparison operators:**
+  ```javascript
+  let result = '5' == 5;   // true (String '5' is coerced to number 5)
+  ```
+
+#### 2. **Explicit Type Conversion**
+
+This involves manually converting a value from one type to another using JavaScript functions.
+
+##### Common Methods for Explicit Conversion:
+
+- **To String:**
+  - Using `String()`:
+    ```javascript
+    let num = 123;
+    let str = String(num);  // '123'
+    ```
+  - Using `toString()` method:
+    ```javascript
+    let num = 123;
+    let str = num.toString();  // '123'
+    ```
+
+- **To Number:**
+  - Using `Number()`:
+    ```javascript
+    let str = '123';
+    let num = Number(str);   // 123
+    ```
+  - Using `parseInt()` or `parseFloat()`:
+    ```javascript
+    let str = '123.45';
+    let num = parseInt(str);  // 123 (parses only the integer part)
+    let floatNum = parseFloat(str);  // 123.45
+    ```
+
+- **To Boolean:**
+  - Using `Boolean()`:
+    ```javascript
+    let str = '';
+    let bool = Boolean(str);  // false (empty string is falsy)
+    ```
+
+- **To Object:**
+  - Using `Object()`:
+    ```javascript
+    let num = 5;
+    let obj = Object(num);  // [Number: 5]
+    ```
+
+#### 3. **Coercion in Different Contexts**
+
+- **Equality comparison:**
+  The `==` operator does type coercion while `===` does strict comparison (no coercion).
+  ```javascript
+  5 == '5';   // true (coercion occurs)
+  5 === '5';  // false (strict equality, types differ)
+  ```
+
+- **Unary `+` Operator:**
+  The unary `+` operator tries to convert a value into a number.
+  ```javascript
+  let str = '123';
+  let num = +str;  // 123 (string '123' is converted to number)
+  ```
+
+- **Null and Undefined:**
+  - `null` can be coerced into `0` in arithmetic operations.
+  - `undefined` coerces into `NaN` in numeric operations.
+
+#### 4. **Falsy and Truthy Values**
+
+In JavaScript, some values are considered falsy (coerced to `false`) and others are truthy (coerced to `true`).
+
+- **Falsy values** include:
+  - `false`
+  - `0`
+  - `""` (empty string)
+  - `null`
+  - `undefined`
+  - `NaN`
+
+- **Truthy values** are any values that are not falsy, e.g., `'0'`, `[]`, `{}`, `42`.
+
+##### Example:
+```javascript
+if ('hello') {
+  console.log('This runs');  // Output: This runs
+}
+
+if (0) {
+  console.log('This won\'t run');
+}
+```
+
+#### 5. **Type Conversion with `JSON.parse()` and `JSON.stringify()`**
+
+- **`JSON.parse()`** converts a JSON string into a JavaScript object.
+  ```javascript
+  let jsonString = '{"name": "John", "age": 30}';
+  let obj = JSON.parse(jsonString);  // {name: "John", age: 30}
+  ```
+
+- **`JSON.stringify()`** converts a JavaScript object into a JSON string.
+  ```javascript
+  let obj = {name: 'John', age: 30};
+  let jsonString = JSON.stringify(obj);  // '{"name": "John", "age": 30}'
+  ```
+
+#### 6. **Other Implicit Coercions**
+
+- **Automatic Coercion in Arithmetic Operations:**
+  - In cases like `'5' * 2`, JavaScript coerces the string `'5'` into a number.
+  ```javascript
+  let result = '5' * 2;  // 10 (String '5' is coerced to number)
+  ```
+
+- **Automatic Coercion with `+` Operator:**
+  The `+` operator is special because it can both add numbers and concatenate strings. In cases involving strings and numbers, it will convert numbers to strings.
+  ```javascript
+  let result = 5 + '5';  // '55' (Number 5 is coerced to string)
+  ```
+
+---
+
+### Key Takeaways:
+
+- **Implicit Type Conversion** is automatic, occurring during operations.
+- **Explicit Type Conversion** is manually controlled, using built-in functions like `String()`, `Number()`, etc.
+- **`==` vs `===`**: The `==` operator performs type coercion, while `===` checks for both value and type equality.
+- **Falsy and Truthy values** affect flow control in JavaScript, especially in conditionals.
+
+Understanding type conversion is crucial for handling different types effectively in JavaScript.
+
+
 
 ## Scopes [^](#get-started)
 **Global Scope :**  
