@@ -13,7 +13,8 @@ In Javascript, **lexical structure** refers to the syntax and set of rules that 
 [Loops](#loops)  
 [Functions](#functions)  
 [Strings](#strings)  
-[Arrays](#arrays)
+[Arrays](#arrays)  
+[Errors](#)
 
 
 ## Javascript Variables
@@ -636,5 +637,44 @@ let longNames = studentNames.filter(name => name.length > 5);
 
 
 
+## Errors [^](#get-started)
+
+### The `try` - `catch` Statement
+The `try` - `catch` statement allows you to test a block of code for errors and handle them if they occur.
+
+#### Syntax:
+```javascript
+try {
+  // Block of code to try
+} catch (err) {
+  // Block of code to handle errors
+}
+```
+
+**The finally Statement:**
+The `finally` statement lets you execute code, after `try` and `catch`, regardless of the result:
+```javascript
+try {
+  // Block of code to try
+}
+catch(err) {
+  // Block of code to handle errors
+}
+finally {
+  // Block of code to be executed regardless of the try / catch result
+}
+```
+
+**The Error Object:**  
+The error object provides two useful properties: `name` and `message`.
+
+**Error Name Values:**  
+**EvalError:**	An error has occurred in the eval() function  
+**RangeError:**	A number "out of range" has occurred  
+**ReferenceError:**	An illegal reference has occurred  
+**SyntaxError:**	A syntax error has occurred  
+**TypeError:**	A type error has occurred  
+**URIError:** An error in encodeURI() has occurred
 
 
+**throw** : The `throw` statement allows you to create a custom error.

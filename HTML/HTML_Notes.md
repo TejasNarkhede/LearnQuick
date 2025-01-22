@@ -37,10 +37,25 @@ HTML tags are special keywords that define how data is displayed or formatted. W
 ### HTML Attributes
 
 **Attributes** are special words placed in opening tags that define the characteristics/behaviour of an HTML element. They are written as name-value pairs.
-
 **Syntax:**
-
+```
 <tag attribute_name="value">
+```
+
+### Metadata
+Metadata in HTML provides information about the HTML document.  
+Metadata is not displayed on the page but is used by browsers, search engines, and other web services.
+
+```
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Title</title>
+</head>
+```
 
 ### HTML Heading Tags
 
@@ -225,6 +240,27 @@ Example:
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
     <input type="submit" value="Submit">
+</form>
+```
+
+### The `for` Attribute in HTML
+The `for` attribute in HTML is used with the `<label>` tag to bind a label to a specific form control. 
+
+### Example:
+```html
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+```
+
+### Checkboxes
+Allow users to select one or more options from a set. 
+Each checkbox operates independently, meaning multiple checkboxes can be checked at the same time.
+```
+<form>
+    <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+    <label for="subscribe">Subscribe to newsletter</label><br>
+    <input type="checkbox" id="terms" name="terms" value="agree">
+    <label for="terms">I agree to the terms and conditions</label>
 </form>
 ```
 
