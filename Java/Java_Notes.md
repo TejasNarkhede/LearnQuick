@@ -7,11 +7,11 @@
 [Variables](#variables)  
 [Arrays](#arrays)  
 [Strings](#strings)  
-[Interfaces](#interfaces)
+[Interfaces](#interfaces)   
 [OOPS](#oops-object-oriented-programming)  
 [Miscellaneous](#miscellaneous)  
 [Multi-Threading](#multi-threading)  
-[Math](#java-math)
+[Math](#java-math)  
 [JSP](#jsp)  
 [Servlet](#servlet)  
 [JDBC](#jdbc)  
@@ -203,6 +203,67 @@ It becomes compulsory to implement all abstract methods.
 - **Polymorphism:** Ability of objects to take on multiple forms.
 
 ## Miscellaneous
+
+### Exception Handling [^](#get-started)
+Exception handling in Java allows developers to manage runtime errors effectively.
+An Exception is an `unwanted` or `unexpected` event that occurs during the execution of a program (i.e., at runtime) and disrupts the normal flow of the program’s instructions.
+
+Base classs -> `Throwable`  
+Branch 1 : `Exception`
+NullPointerException,
+IndexOutOfBoundException, etc  
+Branch 2 : `Error`
+Virtual Machine Error
+StackOverflowError
+OutOfMemory
+
+**Build-in Exceptions:**  
+- **Checked Exceptions: (compile-time exceptions)** Must be either caught or declared in the method signature using throws.  
+- **Unchecked Exceptions:** Include RuntimeException and its subclasses. They do not need to be declared or caught.
+
+Types Of Errors:
+- Compile Time Errors
+- RunTime Errors
+- Logical Errors
+
+
+**Try-Catch Block:** Used to catch exceptions that might be thrown within the `try` block.
+```
+try {
+    // Code that might throw an exception
+} catch (ExceptionType e) {
+    // Code to handle the exception
+}
+```
+
+**Finally Block:** Executes code after the `try` and `catch` blocks, regardless of whether an exception was thrown or not.
+```
+try {
+    // Code that might throw an exception
+} catch (ExceptionType e) {
+    // Code to handle the exception
+} finally {
+    // Code that will always execute
+}
+```
+
+**Throwing Exceptions:** You can throw exceptions using the `throw` keyword.
+```
+if (someCondition) {
+    throw new ExceptionType("Error message");
+}
+```
+
+**Custom Exceptions:** You can create your own exception classes by extending `Exception` or `RuntimeException`.
+```
+public class MyCustomException extends Exception {
+    public MyCustomException(String message) {
+        super(message);
+    }
+}
+```
+
+---
 
 ### Acesss Specifiers / Modifiers [^](#get-started)
 
