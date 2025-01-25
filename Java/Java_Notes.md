@@ -2,9 +2,9 @@
 
 ## Get Started
 
-[Memory](#memory-management)  
 [DataTypes](#java-data-types)  
 [Variables](#variables)  
+[Memory](#memory-management)  
 [Arrays](#arrays)  
 [Strings](#strings)  
 [Interfaces](#interfaces)   
@@ -18,35 +18,6 @@
 [Restful API](#restful-api)  
 [SpringBoot](#spring-boot)  
 [OAuth2.0](#oauth20)
-
-## Memory Management
-
-### Heap Memory
-
-**Divided into two main areas:**
-
-- Young Generation
-- Old Generation
-
-**Young Generation:**
-Where new objects are created. Divided into 3 parts:
-
-- Eden Space,
-- Survivor Spaces (S0 and S1)
-
-Minor GC collects unreachable objects and moves surviving objects to a Survivor Space.
-Objects that survive multiple Minor GCs are promoted to the Old Generation.
-
-**Old Generation:**
-Holds objects that have survived multiple Minor GCs.
-Objects in this space are generally considered to be long-lived.
-Major GC collects unreachable objects from the Old Generation.
-
-**Benefits of this separation:**
-
-- Efficient memory management
-- Faster garbage collection
-- Reduced fragmentation
 
 ## Java Data Types
 
@@ -75,6 +46,36 @@ A primitive data type is predefined by the language and is named by a keyword or
 - **Types:**
   - **Local Variables:** Inside blocks, method bodies, or constructors.
   - **Member Variables/Class Variables:** Inside classes, outside methods.
+
+## Memory Management [^](#get-started)
+
+### Heap Memory
+
+**Divided into two main areas:**
+
+- Young Generation
+- Old Generation
+
+**Young Generation:**
+Where new objects are created. Divided into 3 parts:
+
+- Eden Space,
+- Survivor Spaces (S0 and S1)
+
+Minor GC collects unreachable objects and moves surviving objects to a Survivor Space.
+Objects that survive multiple Minor GCs are promoted to the Old Generation.
+
+**Old Generation:**
+Holds objects that have survived multiple Minor GCs.
+Objects in this space are generally considered to be long-lived.
+Major GC collects unreachable objects from the Old Generation.
+
+**Benefits of this separation:**
+
+- Efficient memory management
+- Faster garbage collection
+- Reduced fragmentation
+
 
 ### Arrays [^](#get-started)
 
@@ -446,93 +447,6 @@ R - Read - GET
 U - Update - PUT/PATCH
 D - Delete - DELETE
 
-## Spring Boot [^](#get-started)
-
-Spring Boot is the quickest and most popular way to start Spring projects.  
-No need for much code or configuration.
-Spring Boot is an extension of the Spring framework that simplifies the setup of new Spring applications. It provides defaults for code and annotation configuration to quickly start new Spring projects.
-
-- **Auto Configuration**: Automatically configures your Spring application based on the jar dependencies you have added.
-- **Standalone**: Spring Boot applications can be run independently using the embedded server.
-- **Production-ready**: Includes features like health checks, metrics, and externalized configuration.
-
-### Annotations
-
-Are metadata used to provide additional information about classes, methods, and fields.  
-Helps in configuring and managing componenets.
-
-### @RestController
-
-A specialized version of the Spring MVC Controller, Designed for building RESTful web services.  
-It combines the functionality of `@Controller` and `@ResponseBody`, meaning that the methods in a `@RestController` return data directly instead of a view.
-
-### @GetMapping
-
-Used to handle HTTP GET requests.  
-It is a composed annotation that acts as a shortcut for `@RequestMapping(method = RequestMethod.GET)`.
-It is typically used to retrieve data from the server.
-
-```
-@GetMapping("/example")
-public ResponseEntity<String> getExample() {
-    return ResponseEntity.ok("GET Response");
-}
-```
-
-### @PostMapping
-
-Used to handle HTTP POST requests.  
-It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.POST).  
-It is typically used to create new resources on the server.
-
-```
-@PostMapping("/example")
-public ResponseEntity<String> postExample(@RequestBody String request) {
-    return ResponseEntity.ok("POST Response");
-}
-```
-
-### @PutMapping
-
-Used to handle HTTP PUT requests.  
-It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.PUT).  
-It is typically used to update existing resources on the server.
-
-```
-@PutMapping("/example")
-public ResponseEntity<String> putExample(@RequestBody String request) {
-    return ResponseEntity.ok("PUT Response");
-}
-```
-
-### @DeleteMapping
-
-Used to handle HTTP DELETE requests.  
-It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.DELETE).  
-It is typically used to delete resources on the server.
-
-```
-@DeleteMapping("/example")
-public ResponseEntity<String> deleteExample() {
-    return ResponseEntity.ok("DELETE Response");
-}
-```
-
-### Spring MVC
-
-Spring MVC (Model-View-Controller) is a framework for building web applications. It separates the application into three interconnected components.
-
-- **Model**: Represents the application's data and business logic.
-- **View**: Represents the presentation layer (UI).
-- **Controller**: Handles user input and interacts with the model to render the appropriate view.
-
-### Three-Tier Architecture
-
-Three-tier architecture is a client-server software architecture pattern that separates the application into three logical layers.
-
-1. **Presentation Layer**: The user interface layer, which interacts with the user.
-2. **Business Logic Layer**: The application layer, which processes data between the presentation and data layers.
-3. **Data Layer**: The database layer, which stores and retrieves data.
 
 ## OAuth2.0 [^](#get-started)
 
