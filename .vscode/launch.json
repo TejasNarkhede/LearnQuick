@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NumberChangingpy",
+            "request": "launch",
+            "mainClass": "NumberChangingpy",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "IncreasingRevPy",
+            "request": "launch",
+            "mainClass": "IncreasingRevPy",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "IncreasingPyramid",
+            "request": "launch",
+            "mainClass": "IncreasingPyramid",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "NumberTriangular",
+            "request": "launch",
+            "mainClass": "NumberTriangular",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
+            "name": "SquareHollow",
+            "request": "launch",
+            "mainClass": "SquareHollow",
+            "projectName": "LearnQuick_7eac115f"
+        },
+        {
+            "type": "java",
             "name": "TicTacToe",
             "request": "launch",
             "mainClass": "TicTacToe",
