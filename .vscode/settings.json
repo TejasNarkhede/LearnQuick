@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Java/Java_Projects/Employee Payroll System/src"
+        "Java/Java_Projects/Employee Payroll System/src",
+        "DSA/Practice/PatternProblems"
     ],
     "java.project.referencedLibraries": []
 }
