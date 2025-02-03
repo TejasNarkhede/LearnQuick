@@ -34,13 +34,13 @@ Create, Read, Update, Delete
     Creating our First table
     
     USE college;
-    
+    ```SQL
     CREATE TABLE student (
     id INT PRIMARY KEY,
     name VARCHAR(50),
     age INT NOT NULL
     );
-    
+    ```
 
 ### Datatypes
 
@@ -95,15 +95,88 @@ When deciding which to use, consider whether the column will ever need to store 
 ## Table related Queries
 
 Creating tables
-
+```SQL
 CREATE TABLE table_name (
      column_name1 datatype constraint,
 );
+```
 
-Select & View ALL columns
-
+Select & View ALL columns  
+```SQL
 SELECT * FROM table_name;
+```
 
-Insert
-
+Insert  
+```SQL
 INSERT INTO table_name col_name VALUES(101, “Name”); 
+```
+
+## Keys
+
+### Primary Key
+
+It is a column (or set of columns) in a table that uniquely identifies each row. (a unique id)  
+There is only 1 primary key and it should not be null.
+
+2 Ways to define
+- age int PRIMARY KEY, …
+- PRIMARY KEY (id, name, …) ensures unqiue combinations from both columns
+
+### Foreign Key
+
+A foreign key is a column (or set of columns) in a table that refers to the primary key in other table.
+There can be multiple Foreign Keys.
+Foreign Keys can have duplicate and null values.
+
+## Constraints
+
+SQL Constraints are used to specify rules for data in a table.
+
+| **Constraint** | **Description** | **Example** |
+| --- | --- | --- |
+| **NOT NULL** | Columns cannot have null values | `col1 INT NOT NULL` |
+| **UNIQUE** | All values in column are different | `col2 INT UNIQUE` |
+| **PRIMARY KEY** | Makes a column unique & not null but used only for one column | `id INT PRIMARY KEY` |
+| **FOREIGN KEY** | Prevent actions that would destroy links between tables | ```SQL CREATE TABLE temp ( cust_id INT, FOREIGN KEY (cust_id) REFERENCES customer(id) ); ``` |
+| **DEFAULT** | Sets the default value of a column | `salary INT DEFAULT 25000` |
+| **CHECK** | Limits the values allowed in a column | ```SQL age INT CHECK (age >= 18)``` ```CREATE TABLE city ( age INT, CONSTRAINT age_check CHECK (age >= 18 AND city = 'DELHI') ); ``` |
+
+## SQL Commands
+
+### SELECT
+Used to select any data from the database
+
+Basic Syntax
+```SQL
+SELECT col1, col2 FROM table_name;
+```
+TO Select All
+```SQL
+SELECT * FROM table_name;
+```
+TO select unique values
+```SQL
+SELECT DISTINCT col1 FROM table_name;
+```
+
+### WHERE Clause
+To define some conditions
+
+```SQL
+SELECT col1, col2 FROM table_name
+WHERE conditions;
+```
+
+### Using Operators in WHERE
+
+Arithmetic operators : + , - , * , / , %
+
+Comparsion operators : = , ≠ , < , > , ≤ , ≥
+
+Logical operators : AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
+
+Bitwise operators : & (Bitwise AND) , | (Bitwise OR)
+
+## Operators
+
+### AND
