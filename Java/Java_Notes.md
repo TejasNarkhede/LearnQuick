@@ -7,8 +7,10 @@
 [Memory](#memory-management)  
 [Arrays](#arrays)  
 [Strings](#strings)  
-[Interfaces](#interfaces)   
+[Abstract Class](#abstract-class)  
+[Interfaces](#interfaces)  
 [OOPS](#oops-object-oriented-programming)  
+[Wrapper Classes](#wrapper-classes)  
 [Miscellaneous](#miscellaneous)  
 [Multi-Threading](#multi-threading)  
 [Math](#java-math)  
@@ -16,7 +18,6 @@
 [Servlet](#servlet)  
 [JDBC](#jdbc)  
 [Restful API](#restful-api)  
-[SpringBoot](#spring-boot)  
 [OAuth2.0](#oauth20)
 
 ## Java Data Types
@@ -163,24 +164,70 @@ boolean result = str.endsWith("world!"); // result will be true
 
 ![Strings Vs StringBuilder Vs StringBuffer](Notesimages\StringsBuilderBuffer.png)
 
-### Interfaces [^](#get-started)
+## Abstract Class [^](#get-started)
+
+An abstract class in programming is a class that cannot be instantiated directly. It serves as a blueprint for other classes. Abstract classes can contain abstract methods, which are methods without implementation that must be overridden in derived classes, as well as regular methods with implementations.
+
+Abstract Methods: These methods are declared without an implementation and must be overridden in subclasses.
+Concrete Methods: These methods have an implementation and can be used directly by subclasses.
+Instantiation: You cannot create an instance of an abstract class directly.
+
+Abstract Keyword : Abstract is a non-access modifier in java applicable for classes, and methods but **not** variables. It is used to achieve abstraction
+
+## Interfaces [^](#get-started)
+An interface in Java is a `blueprint` of a class that contains static constants and abstract methods. 
+It is used to achieve `abstraction` and `multiple inheritance` in Java.
 Is a reference type that can contain only constants, default methods, which are implicitly public and abstract.  
 Can not instantiated but implemented by classes.  
-By default public and abstract.  
+By default `public` and `abstract`.  
 Variables are final and static.  
-This mechanism supports abstraction and multiple inheritance (enabling class to implement multiple interfaces
-and inherit their behaviours).
+Since `Java 8`, interfaces can also have `default` and `static methods`, and since `Java 9`, they can have `private methods`.
 
-```
-public interface Animal {
-    void eat();
-    void sleep();
+### Declaring Interface
+
+An interface is declared using the ***interface*** keyword. 
+
+A class that implements an interface must implement all the methods declared in the interface.
+
+```java
+// Interface declaration
+interface Animal {
+    void animalSound(); // interface method (does not have a body)
+
+    void sleep(); // interface method (does not have a body)
+}
+
+// Implementing the interface
+class Dog implements Animal {
+    public void animalSound() {
+        System.out.println("dog barks");
+    }
+
+    public void sleep() {
+        System.out.println("Zzz");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog(); // Create a Dog object
+        myDog.animalSound();
+        myDog.sleep();
+    }
 }
 ```
 
 #### implements Keyword
 The `implements` keyword is used by a class to implement an interface.  
 It becomes compulsory to implement all abstract methods.
+
+### Why use interfaces?
+
+There are several reasons to use interfaces in Java:
+
+1. **Abstraction**: Interfaces provide a way to achieve abstraction by defining methods that must be implemented by classes.
+2. **Multiple Inheritance**: Java does not support multiple inheritance with classes, but it can be achieved with interfaces. A class can implement multiple interfaces.
+3. **Loose Coupling**: Interfaces help in achieving loose coupling by allowing the implementation to be changed without affecting the code that uses the interface.
 
 #### Types of Interfaces
 - Normal Interface
@@ -203,6 +250,36 @@ It becomes compulsory to implement all abstract methods.
 - **Inheritance:** Creating new classes based on existing ones.
 - **Polymorphism:** Ability of objects to take on multiple forms.
 
+## Wrapper Classes [^](#get-started)
+
+A wrapper class in Java is used to convert primitive data types into objects. This is particularly useful when working with collections that can only store objects, such as `ArrayList`, `HashMap`, etc. Each of the eight primitive data types has a corresponding wrapper class:
+
+- `byte` -> `Byte`
+- `short` -> `Short`
+- `int` -> `Integer`
+- `long` -> `Long`
+- `float` -> `Float`
+- `double` -> `Double`
+- `char` -> `Character`
+- `boolean` -> `Boolean`
+
+### Autoboxing
+
+Autoboxing is the automatic conversion of primitive datatypes (like `int`, `char`, etc.) intotheir corresponding object wrapper classes (`Integer`, `Character`, etc.)
+
+```java
+int primitiveInt = 5;
+Integer wrappedInt = primitiveInt; // Autoboxing
+```
+
+### Autounboxing
+
+Autounboxing is the reverse process where the  wrapper class are converted by to their corresponding primitive types.
+
+```java
+Integer wrappedInt = 10;
+int primitiveInt = wrappedInt; // Autounboxing
+```
 ## Miscellaneous
 
 ### Exception Handling [^](#get-started)

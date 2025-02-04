@@ -130,7 +130,12 @@ Foreign Keys can have duplicate and null values.
 
 ## Constraints
 
-SQL Constraints are used to specify rules for data in a table.
+SQL Constraints are used to specify rules for data in a table.  
+
+```SQL
+CHAR : Fixed-length, occupy fixed storage, padded with spaces, faster.  
+VARCHAR : Variable-length, occupy as per need, no padding, more storage-efficient.  
+```
 
 | **Constraint** | **Description** | **Example** |
 | --- | --- | --- |
@@ -179,4 +184,80 @@ Bitwise operators : & (Bitwise AND) , | (Bitwise OR)
 
 ## Operators
 
-### AND
+### AND (to check both conditions to be true)
+
+```sql
+SELECT * FROM student WHERE (marks > 80 AND location="Pune");
+```
+
+### OR (to check for one of the conditions to be true)
+
+```sql
+SELECT * FROM student WHERE (marks > 90 OR location="Pune");
+```
+
+### BETWEEN (selects for a given range)
+
+```sql
+SELECT * FROM student WHERE marks BETWEEN 80 AND 90; 
+```
+
+### IN (matches any value in the list)
+
+```sql
+SELECT * FROM student WHERE location IN ("Pune", "Mumbai", "Delhi"); 
+```
+
+### NOT (to neglect/reverse the given condition)
+
+```sql
+SELECT * FROM student WHERE location NOT IN ("Pune", "Mumbai", "Delhi"); 
+```
+
+### LIMIT Clause
+
+Sets an upper limit on number of rows to be returned.
+
+```sql
+SELECT * FROM student LIMIT 5;
+```
+
+### ORDER BY Clause
+
+To sort  in (ASC) ascending or (DESC) descending order
+
+```sql
+SELECT * FROM student ORDER BY name ASC;
+```
+
+```sql
+-- Top 3 student
+SELECT * FROM student ORDER BY marks DESC LIMIT 3;
+```
+
+## Aggregate Functions
+
+Aggregate functions perform a calculation on a set of values, and return a single value.
+
+- COUNT()
+- MAX()
+- MIN()
+- SUM()
+- AVG()
+
+```sql
+SELECT MAX(marks) FROM student;
+```
+
+### GROUP BY Clause
+
+The GROUP BY clause in SQL is a powerful tool used to arrange identical data into groups
+
+It collects data from multiple records and groups the result by one ore more column.
+Generally we use GROUP BY with some aggregate function.
+
+```sql
+SELECT name,location, COUNT(id) 
+FROM student 
+GROUP BY name,location;
+```
