@@ -6,6 +6,10 @@ Database is collection of data in a format that can be easily accessed (Digital)
 
 A software application used to manage our DB is called DBMS (Database Management System)
 
+```sql
+-- A schema is the blueprint or structure that defines how data is organized and stored in a database.
+```
+
 ### Types of Databases
 
 | Relational (RDBMS) | Non-relational (NoSQL) |
@@ -260,4 +264,104 @@ Generally we use GROUP BY with some aggregate function.
 SELECT name,location, COUNT(id) 
 FROM student 
 GROUP BY name,location;
+```
+
+### Having Clause
+
+Similar to WHERE i.e applies some condition on rows
+
+Used when we want to apply any condition after grouping.
+
+```sql
+SELECT location, count(id) 
+FROM student 
+GROUP BY location 
+HAVING MAX(marks) > 80;
+```
+
+## General Order
+
+```sql
+SELECT columns
+FROM table_name
+WHERE condition -- on rows
+GROUP BY columns
+HAVING condition -- on groups
+ORDER BY columns ASC/DESC
+```
+
+## Table related Queries
+
+### UPDATE (to update existing rows)
+
+```sql
+UPDATE student
+SET grade = "0"
+WHERE marks > 90;
+```
+
+### DELETE (to delete existing rows)
+
+```sql
+DELETE FROM student
+WHERE marks < 25;
+```
+
+## Cascading for FOREIGN KEY
+
+### ON DELETE CASCADE
+
+When we create a foreign key using this option, it deletes the referencing rows in the child table when the referenced row is deleted in the parent table which has a primary key.
+
+### ON UPDATE CASCADE
+
+When we create a foreign key using this UPDATE CASCADE the referencing rows are updated in the child table when the referenced row  is updated in the parent table which has a primary key.
+
+```sql
+FOREIGN KEY (dept_id) REFERENCES course(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+```
+
+## ALTER (to change the schema)
+
+### ADD Column
+
+```sql
+ALTER TABLE student
+ADD COLUMN age INT; 
+```
+
+### DROP Column
+
+```sql
+ ALTER TABLE student
+ DROP COLUMN age; 
+```
+
+### RENAME Column
+
+```sql
+ ALTER TABLE student
+ RENAME TO students ;
+```
+
+### CHANGE Column (rename)
+
+```sql
+ ALTER TABLE students
+ CHANGE location city VARCHAR(20);
+```
+
+### MODIFY Column (modify datatype/constraint)
+
+```sql
+ ALTER TABLE students
+ MODIFY name VARCHAR(50);
+```
+
+## TRUNCATE (to empty contents of table / deletes only data without deleting table)
+
+```sql
+TRUNCATE TABLE table_name;
 ```
