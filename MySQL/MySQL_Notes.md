@@ -365,3 +365,130 @@ ADD COLUMN age INT;
 ```sql
 TRUNCATE TABLE table_name;
 ```
+
+## Joins  in  SQL
+
+Join is used to combine rows from two or more tables, based on a related column between them
+
+![Types Of Join.png](/MySQL/Notes_Images/TypesOfJoinsInMYSQL.png)
+
+```sql
+
+Alias (Alternate name)
+
+ SELECT *
+ FROM student ***as tableA***
+ INNER JOIN course *as tableB*
+ ON *tableA*.id = *tableB*.id;
+```
+
+
+### Inner Join
+Returns records that have matching values in both tables
+Syntax
+```sql
+ SELECT *
+ FROM student
+ INNER JOIN course
+ ON student.id = course.id;
+```
+
+### Left Join
+
+Returns all records from the left table, and the matched records from the right table
+```sql
+ SELECT *
+ FROM student
+ LEFT JOIN course
+ ON student.id = course.id;
+```
+
+### Right Join
+Returns all records from the right table, and the matched records from the left side
+
+```sql
+ SELECT *
+ FROM student
+ RIGHT JOIN course
+ ON student.id = course.id;
+```
+
+### FULL Join (not available in MySQL )→ LEFT UNION RIGHT Combo
+However, MySQL does not natively support the FULL JOIN keyword.  
+Instead, we can achieve the same result using a combination of LEFT JOIN, RIGHT JOIN, and the UNION operator.  
+Returns all records when there is a match in either left or right
+
+```sql
+SELECT *
+ FROM student
+ LEFT JOIN course
+ ON student.id = course.id
+ UNION
+ SELECT *
+ FROM student
+ RIGHT JOIN course
+ ON student.id = course.id;
+```
+
+### Self Join
+- It is regular JOIN but the table is joined with itself. 
+- Used to compare rows within same table.  
+- Used for creating a **hierarchy**  
+
+```sql
+SELECT E.id. E.name, M.name
+FROM employee AS E
+JOIN employee AS M
+ON E.id = M.id;
+```
+
+### UNION
+
+Is is used to combine the result-set of two or more SELECT statements.
+To use it
+- Must have same no of columns
+- Must have similar data types
+
+UNION Gives Unique records  
+UNION ALL Gives Duplicate records
+
+```sql
+SELECT name FROM student
+UNION 
+SELECT  name FROM course;
+```
+
+## SQL Sub Queries
+
+A Subquery or Inner Query or a nested query is a query within another SQlL query.
+In involves 2 select statements.
+
+```sql
+-- Get names of all students who scored more than class average. 
+SELECT *
+FROM student
+WHERE marks > (SELECT AVG(marks) FROM student);
+```
+
+```sql
+-- Find the names of all students with even roll numbers.alter
+SELECT id,name
+FROM student
+WHERE id IN (SELECT id FROM student WHERE id % 2 = 0);
+```
+
+## MySQL Views
+
+A view is a virtual table based on the result-set of an SQL statement.  
+Dynamically displays data from other tables
+
+Features 
+
+- Simplify complex queries
+- Controlling access to data
+- Data security
+
+```sql
+CREATE VIEW view1 AS
+SELECT id, name, marks, grade FROM student;
+```
