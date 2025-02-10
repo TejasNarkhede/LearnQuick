@@ -20,13 +20,37 @@
 [Restful API](#restful-api)  
 [OAuth2.0](#oauth20)
 
+## About Java
+Java is a high level, class-based, object oriented programming language.  
+Java was developed by James Gosling at Sun Microsystems Inc. in May 1995 and later acquired by Oracle Corporation.
+Java is well known for its robustness, scalability, security and simplicity. 
+
+
+## Variables
+
+- **Scope:** The part of the program where a variable is accessible.
+- **Types:**
+  - **Local Variables:** Inside blocks, method bodies, or constructors.
+  - **Member Variables/Class Variables:** Inside classes, outside methods.
+
+
+### Static constants are variables that are declared as static and final
+- **Static:** The variable belongs to the class, not instances of the class.
+- **Final:** The value of the variable cannot be modified once it is assigned.
+- **Naming Convention:** UPPERCASE letters with underscores to separate
+
+
 ## Java Data Types
 
 ### Primitive Data Types [^](#get-started)
+Datatypes specify different sizes and values that can be stored in an variable.
+Java is a statically typed language, meaning all variables must be declared before use.
+Two major categories of datatypes -
+- Primitive Datatype
+- Non-Primitive Datatype
 
-Also known as reference type because they refer to objects  
-A primitive data type is predefined by the language and is named by a keyword or reserved keyword. There are eight types of primitive data types in Java:
-
+#### Primitive Datatypes
+ A primitive data type is predefined by the language and is named by a keyword or reserved keyword. There are eight types of primitive data types in Java:
 - **boolean:** Stores true or false values.
 - **byte:** 8-bit signed two's complement integer (-128 to 127).
 - **short:** 16-bit signed two's complement integer (-32768 to 32767).
@@ -36,17 +60,21 @@ A primitive data type is predefined by the language and is named by a keyword or
 - **double:** Double-precision 64-bit IEEE 754 floating-point number.
 - **char:** Single 16-bit Unicode character.
 
+#### Non-Primitive Datatypes
+Non-primitive data types, also known as reference types, include strings,classes, interfaces, and arrays.  
+Store reference to the memory location and not the actual data.
+Ex  
+**- Strings:** sequence of characters, immutable, once created they cannot be changed.   
+**- Arrays:** collection of variables of the same type, fixed length, dynamically allocated (heap)  
+**- Classes:** A blueprint for creating objects, defines a set of properties or methods that are common to all objects of one type.  
+**- Objects:** An instance of a class, represent real-life entities and interact by invoking methods  
+**- Interfaces:** Is a blueprint of a class that contains static constants and abstract methods,used to achieve abstraction and multiple inheritance,  cannot have method bodies.  
+
 ### In-built Methods
 
 - **Integer.parseInt():** Converts a string to an int.
 - **Integer.valueOf():** Converts a string to an Integer object.
 
-### Variables
-
-- **Scope:** The part of the program where a variable is accessible.
-- **Types:**
-  - **Local Variables:** Inside blocks, method bodies, or constructors.
-  - **Member Variables/Class Variables:** Inside classes, outside methods.
 
 ## Memory Management [^](#get-started)
 
